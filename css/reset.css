@@ -1,0 +1,18 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+:root {
+  --primary-color: #1e293b;    /* Màu xanh cho Header, tiêu đề lớn */
+  --accent-color: #e11d48;     /* Màu đỏ cho nút */
+  --secondary-color: #0284c7;  /* Màu xanh nhạt hơn cho link, tag danh mục */
+  --card-bg: #ffffff;          /* Màu nền khung chứa mỗi cuốn sách */
+  --text-color: #334155;       /* Màu chữ chính */
+  --text-muted: #64748b;       /* Màu chữ phụ */
+}
