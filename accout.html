@@ -1,11 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
+    <!-- Giúp giao diện hiển thị đúng trên điện thoại -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Thông tin tài khoản</title>
+    <!-- Liên kết file HTML với file CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <!-- Phần nội dung chính của trang -->
+    <main class="account-page">
+        <!-- Tiêu đề trang -->
+        <header class="page-header">
+            <h1>Thông tin tài khoản</h1>
+        </header>
+        <!-- Khung chứa thông tin tài khoản -->
+        <section class="account-card">
+            <!-- Ảnh đại diện và tên người dùng -->
+            <div class="profile">
+                <div class="avatar-wrapper">
+                    <!-- Hiển thị ảnh đại diện trong thư mục images -->
+                    <img src="images/avatar.png"
+                         alt="Ảnh đại diện Nguyễn Minh Anh"
+                         class="avatar">
+                </div>
+                <h2 class="profile-name">Thái Bình Bình</h2>
+            </div>
+            <!-- Biểu mẫu thông tin cá nhân -->
+            <form class="account-form">
+                <!-- Chia các trường nhập liệu thành hai cột -->
+                <div class="form-grid">
+                    <!-- Trường nhập họ và tên -->
+                    <div class="form-group">
+                        <label for="fullname">Họ và tên</label>
+                        <input type="text" id="fullname"
+                               name="fullname" value="Thái Bình Bình">
+                    </div>
+                    <!-- Trường hiển thị email, không cho chỉnh sửa -->
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email"
+                               value="binh2107z@email.com" disabled>
+                    </div>
+                    <!-- Trường nhập số điện thoại -->
+                    <div class="form-group">
+                        <label for="phone">Số điện thoại</label>
+                        <input type="tel" id="phone" name="phone"
+                               value="0912 345 678">
+                    </div>
+                    <!-- Trường nhập ngày sinh -->
+                    <div class="form-group">
+                        <label for="birthday">Ngày sinh</label>
+                        <input type="text" id="birthday" name="birthday"
+                               value="12/12/2005">
+                    </div>
+                </div>
+                <!-- Khu vực hiển thị địa chỉ nhận hàng -->
+                <section class="address-section">
+                    <h3>Địa chỉ nhận hàng</h3>
+                    <!-- Thông tin địa chỉ mặc định -->
+                    <div class="address-card">
+                        <!-- Biểu tượng vị trí được vẽ bằng SVG -->
+                        <div class="location-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M20 10C20 15 12 22 12 22S4 15 4 10A8 8 0 1 1 20 10Z"
+                                      stroke="currentColor" stroke-width="1.7"/>
+                                <circle cx="12" cy="10" r="2.7"
+                                        stroke="currentColor" stroke-width="1.7"/>
+                            </svg>
+                        </div>
+                        <!-- Nội dung địa chỉ -->
+                        <div class="address-info">
+                            <p class="address-label">Địa chỉ mặc định</p>
+                            <p class="address-text">
+                                3/2, Ninh Kiều, Cần Thơ
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <!-- Các nút thao tác ở cuối biểu mẫu -->
+                <div class="form-actions">
+                    <!-- Đặt lại các trường về giá trị ban đầu -->
+                    <button type="reset" class="button button-cancel">
+                        Hủy thay đổi
+                    </button>
+                    <!-- Nút giao diện lưu thông tin -->
+                    <button type="button" class="button button-save">
+                        Lưu thay đổi
+                    </button>
+                </div>
+            </form>
+        </section>
+    </main>
 </body>
 </html>
