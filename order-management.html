@@ -1,1 +1,116 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <!-- Giúp trang web tương thích với màn hình điện thoại -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý đơn hàng</title>
+    <!-- Liên kết file HTML với file CSS -->
+    <link rel="stylesheet" href="stylee.css">
+</head>
+<body>
+    <!-- Nội dung chính của trang quản lý đơn hàng -->
+    <main class="order-page">
+        <!-- Tiêu đề trang -->
+        <header class="page-header">
+            <h1>Quản lý đơn hàng</h1>
+        </header>
+        <!-- Các tab lọc trạng thái đơn hàng -->
+        <nav class="order-tabs" aria-label="Trạng thái đơn hàng">
+            <a href="#all" class="tab active">Tất cả (3)</a>
+            <a href="#pending" class="tab">Chờ xác nhận (1)</a>
+            <a href="#shipping" class="tab">Đang giao (1)</a>
+            <a href="#delivered" class="tab">Đã giao (1)</a>
+        </nav>
+        <!-- Ô tìm kiếm mã đơn hàng -->
+        <div class="search-box">
+            <span class="search-icon" aria-hidden="true"></span>
+            <input type="search" placeholder="Tìm theo mã đơn hàng..." aria-label="Tìm theo mã đơn hàng">
+        </div>
+        <!-- Danh sách đơn hàng -->
+        <section class="order-list" aria-label="Danh sách đơn hàng">
+            <!-- Đơn hàng thứ nhất -->
+            <article class="order-card" id="pending">
+                <div class="order-header">
+                    <div>
+                        <h2>Đơn hàng #SP10245</h2>
+                        <p class="order-date">Ngày đặt: 08/10/2026</p>
+                    </div>
+                    <span class="order-status status-pending">Chờ xác nhận</span>
+                </div>
+
+                <div class="order-content">
+                    <!-- Ảnh bìa sách Đắc Nhân Tâm -->
+                    <img class="book-image" src="images/dac-nhan-tam.png" alt="Bìa sách Đắc Nhân Tâm">
+                    <!-- Tên và thông tin sách -->
+                    <div class="book-info">
+                        <h3>Đắc Nhân Tâm</h3>
+                        <p>Số lượng: x1</p>
+                        <p>Đơn giá: 125.000đ</p>
+                    </div>
+                    <!-- Tổng tiền và nút hủy đơn -->
+                    <div class="order-summary">
+                        <div>
+                            <p class="total-label">Tổng tiền</p>
+                            <p class="total-price">125.000đ</p>
+                        </div>
+                        <button type="button" class="cancel-button">Hủy đơn</button>
+                    </div>
+                </div>
+            </article>
+            <!-- Đơn hàng thứ hai -->
+            <article class="order-card" id="shipping">
+                <div class="order-header">
+                    <div>
+                        <h2>Đơn hàng #SP10231</h2>
+                        <p class="order-date">Ngày đặt: 05/10/2026</p>
+                    </div>
+                    <span class="order-status status-shipping">Đang giao</span>
+                </div>
+                <div class="order-content">
+                    <!-- Ảnh bìa sách Thiên Tài Bên Trái, Kẻ Điên Bên Phải -->
+                    <img class="book-image" src="images/thien-tai-ben-trai.png" alt="Bìa sách Thiên Tài Bên Trái, Kẻ Điên Bên Phải">
+
+                    <div class="book-info">
+                        <h3>Thiên Tài Bên Trái, Kẻ Điên Bên Phải</h3>
+                        <p>Số lượng: x1</p>
+                        <p>Đơn giá: 158.000đ</p>
+                    </div>
+                    <div class="order-summary">
+                        <div>
+                            <p class="total-label">Tổng tiền</p>
+                            <p class="total-price">158.000đ</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <!-- Đơn hàng thứ ba -->
+            <article class="order-card" id="delivered">
+                <div class="order-header">
+                    <div>
+                        <h2>Đơn hàng #SP10198</h2>
+                        <p class="order-date">Ngày đặt: 02/10/2026</p>
+                    </div>
+                    <span class="order-status status-delivered">Đã giao</span>
+                </div>
+                <div class="order-content">
+                    <!-- Ảnh bìa sách Tư Duy Nhanh Và Chậm -->
+                    <img class="book-image" src="images/tu-duy-nhanh-va-cham.png" alt="Bìa sách Tư Duy Nhanh Và Chậm">
+                    <div class="book-info">
+                        <h3>Tư Duy Nhanh Và Chậm</h3>
+                        <p>Số lượng: x1</p>
+                        <p>Đơn giá: 115.000đ</p>
+                    </div>
+                    <div class="order-summary">
+                        <div>
+                            <p class="total-label">Tổng tiền</p>
+                            <p class="total-price">115.000đ</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
 
