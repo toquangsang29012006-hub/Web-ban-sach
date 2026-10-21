@@ -1,60 +1,59 @@
+
 <!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <!-- Giúp trang web tương thích với màn hình điện thoại -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quản lý đơn hàng</title>
+    <title>Quản lý đơn hàng</title> <!--xuất hiện trên thanh trình duyệt-->
     <!-- Liên kết file HTML với file CSS -->
     <link rel="stylesheet" href="stylee.css">
 </head>
 <body>
-    <!-- Nội dung chính của trang quản lý đơn hàng -->
+    <!--bắt đầu nội dung chính của trang quản lý đơn hàng -->
     <main class="order-page">
-        <!-- Tiêu đề trang -->
         <header class="page-header">
-            <h1>Quản lý đơn hàng</h1>
+            <h1>Quản lý đơn hàng</h1> <!--tiêu đề đầu trang trên cùng, cấp 1, nội dung hiển thị là Quản lý đơn hàng-->
         </header>
         <!-- Các tab lọc trạng thái đơn hàng -->
-        <nav class="order-tabs" aria-label="Trạng thái đơn hàng">
-            <a href="#all" class="tab active">Tất cả (3)</a>
+        <nav class="order-tabs">
+            <a href="#all" class="tab active">Tất cả (3)</a> <!--thẻ a có 2 lớp: tab active(tab: cho các trên thanh nav; active: hiển thị 1 tab đang được chọn)-->
             <a href="#pending" class="tab">Chờ xác nhận (1)</a>
             <a href="#shipping" class="tab">Đang giao (1)</a>
             <a href="#delivered" class="tab">Đã giao (1)</a>
         </nav>
-        <!-- Ô tìm kiếm mã đơn hàng -->
+        <!-- ô tìm kiếm mã đơn hàng -->
         <div class="search-box">
-            <span class="search-icon" aria-hidden="true"></span>
-            <input type="search" placeholder="Tìm theo mã đơn hàng..." aria-label="Tìm theo mã đơn hàng">
+            <input type="search" placeholder="Tìm theo mã đơn hàng..."> <!--placeholder: gợi ý trong ô nhập tìm kiếm-->
         </div>
-        <!-- Danh sách đơn hàng -->
-        <section class="order-list" aria-label="Danh sách đơn hàng">
+        <!-- chứa danh sách có 3 đơn hàng -->
+        <section class="order-list">
             <!-- Đơn hàng thứ nhất -->
-            <article class="order-card" id="pending">
-                <div class="order-header">
+            <article class="order-card" id="pending"> <!--tạo 1 khối để biểu diễn ĐH; gán pending ở tab chờ xác nhận-->
+                <div class="order-header"> <!--lớp để định dạng cho khu vực chứa mã đơn, ngày và trạng thái-->
                     <div>
-                        <h2>Đơn hàng #SP10245</h2>
-                        <p class="order-date">Ngày đặt: 08/10/2026</p>
+                        <h2>Đơn hàng #SP10245</h2> <!--tiêu đề cấp 2, cho mã đơn-->
+                        <p class="order-date">Ngày đặt: 08/10/2026</p> <!--tạo đoạn văn bản cho Ngày đặt-->
                     </div>
-                    <span class="order-status status-pending">Chờ xác nhận</span>
+                    <span class="order-status status-pending">Chờ xác nhận</span> <!--có 2 lớp: order-status (chung cho các nhãn trạng thái); status pendng: riêng cho "chờ xác nhận"-->
                 </div>
 
-                <div class="order-content">
+                <div class="order-content"> <!--chi tiết của đơn hầng: ảnh; số lượng; đơn giá; tiền-->
                     <!-- Ảnh bìa sách Đắc Nhân Tâm -->
-                    <img class="book-image" src="images/dac-nhan-tam.png" alt="Bìa sách Đắc Nhân Tâm">
-                    <!-- Tên và thông tin sách -->
+                    <img class="book-image" src="images/dac-nhan-tam.png" alt="Đắc Nhân Tâm">
+                    <!--img: hiển thị hình; src: đường dẫn đến file ảnh; alt sẽ dược hiển thị nếu ảnh không được tải-->
+                    <!-- Tên và thông tin của sách -->
                     <div class="book-info">
-                        <h3>Đắc Nhân Tâm</h3>
-                        <p>Số lượng: x1</p>
-                        <p>Đơn giá: 125.000đ</p>
+                        <h3>Đắc Nhân Tâm</h3> <!--tiêu đề cấp 3-->
+                        <p>Số lượng: x1</p> <!--văn bản-->
+                        <p>Đơn giá: 125.000đ</p> <!--văn bản-->
                     </div>
-                    <!-- Tổng tiền và nút hủy đơn -->
+                    <!-- Tổng số tiền và nút hủy đơn -->
                     <div class="order-summary">
                         <div>
                             <p class="total-label">Tổng tiền</p>
                             <p class="total-price">125.000đ</p>
                         </div>
-                        <button type="button" class="cancel-button">Hủy đơn</button>
+                        <button type="button" class="cancel-button">Hủy đơn</button> <!--tạo nút hủy đơn-->
                     </div>
                 </div>
             </article>
@@ -68,8 +67,8 @@
                     <span class="order-status status-shipping">Đang giao</span>
                 </div>
                 <div class="order-content">
-                    <!-- Ảnh bìa sách Thiên Tài Bên Trái, Kẻ Điên Bên Phải -->
-                    <img class="book-image" src="images/thien-tai-ben-trai.png" alt="Bìa sách Thiên Tài Bên Trái, Kẻ Điên Bên Phải">
+                    <!-- anh bìa của sách Thiên Tài Bên Trái, Kẻ Điên Bên Phải -->
+                    <img class="book-image" src="images/thien-tai-ben-trai.png" alt="Thiên Tài Bên Trái, Kẻ Điên Bên Phải">
 
                     <div class="book-info">
                         <h3>Thiên Tài Bên Trái, Kẻ Điên Bên Phải</h3>
@@ -84,7 +83,7 @@
                     </div>
                 </div>
             </article>
-            <!-- Đơn hàng thứ ba -->
+            <!-- đơn hàng thứ ba -->
             <article class="order-card" id="delivered">
                 <div class="order-header">
                     <div>
@@ -95,7 +94,7 @@
                 </div>
                 <div class="order-content">
                     <!-- Ảnh bìa sách Tư Duy Nhanh Và Chậm -->
-                    <img class="book-image" src="images/tu-duy-nhanh-va-cham.png" alt="Bìa sách Tư Duy Nhanh Và Chậm">
+                    <img class="book-image" src="images/tu-duy-nhanh-va-cham.png" alt="Tư Duy Nhanh Và Chậm">
                     <div class="book-info">
                         <h3>Tư Duy Nhanh Và Chậm</h3>
                         <p>Số lượng: x1</p>
@@ -113,4 +112,3 @@
     </main>
 </body>
 </html>
-
