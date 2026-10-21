@@ -1,0 +1,286 @@
+* { 
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0; 
+}  /*margin=0 (phần nội dung sẽ sát viền phía ngoài, không khoảng cách); padding=0(xóa khoảng cách trong phần tử, giữa nội dung và đường viền)
+/* border-box: chiều rộng sẽ tính luôn padding và border để không vượt quá độ rộng đã đặt ra*/
+/* khai báo các màu sắc để dùng chung*/
+:root {
+    --green: #145d46;
+    --green-dark: #0e4937;
+    --text: #171b19;
+    --muted: #737a76;
+    --border: #e2e5e2;
+    --background: #f6f6f0;
+    --white: #ffffff;
+} /*:root (chọn phần tử html); đặt các tên biến để lưu màu sắc*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--text);
+    background: var(--background);
+} /*nội dung trang web: định dạng kiểu chữ, cỡ chữ, khoảng cách dòng, màu chữ, nền*/
+input,
+button {
+    font: inherit;
+} /*bộ chọn input, button có thuộc tính font được kế thừa từ cha*/
+button {
+    cursor: pointer;
+} /*con trỏ sẽ thay đổi thành dang bàn tay khi di chuyển con trỏ chuột vào*/
+/*bố cục mặc định dành cho điện thoại (Mobile First)*/
+.order-page {
+    width: calc(100% - 24px);
+    margin: 22px auto;
+} /*khung bao quanh nội dung QLDH; dùng calc để tính giá trị; khoảng cách trên, dưới: 22px, trái phải là auto căn chỉnh ở giữa theo chiều ngang*/
+/*định dạng tiêu đề trang */
+.page-header {
+    margin-bottom: 18px;
+}/*khoảng cách 18px ở phía dưới*/
+.page-header h1 {
+    font-size: 25px;
+    line-height: 1.3;
+    font-weight: 700;
+} /*chọn h1 trong page-header để định dạng cỡ chữ, khoảng cách dòng và in đậm*/
+.order-tabs {
+    display: flex;
+    gap: 22px;
+    margin-bottom: 14px;
+    overflow-x: auto;
+    border-bottom: 1px solid var(--border);
+    scrollbar-width: thin;
+} /*display: flex(sắp xếp theo hàng ngang); gap: 22px(khoảng cách giữa các tab); overflow-x: auto(cuộn khi bị tràn)*/
+/*đường viền dưới là 1px, solid(nét liền); độ rộng thanh cuộn mỏng*/
+.tab {
+    display: block;
+    flex-shrink: 0;
+    padding: 10px 2px;
+    border-bottom: 3px solid transparent;
+    color: #242824;
+    text-decoration: none;
+    white-space: nowrap;
+    font-size: 13px;
+} /*display-block(phần tử hiển thị theo khối);flex-shrink:0 (phần tử không được thu nhỏ); white-space: nowrap (văn bản không tự xuống dòng)*/
+.tab.active {
+    color: var(--green-dark);
+    border-bottom-color: var(--green);
+    font-weight: 600;
+}
+/*khung chứa biểu tượng và ô nhập tìm kiếm*/
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    height: 42px;
+    margin-bottom: 16px;
+    padding: 0 13px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--white);
+} /*align-items: center(căn giữa theo chiều dọc); gap: 12px (khoảng cách 12px giữa phần từ là biểu tượng và ô nhập; border-radius: 10px (bo tròn gốc 10px)*/
+/*vẽ biểu tượng tìm kiếm bằng css*/
+.search-icon {
+    position: relative;
+    display: block;
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+    border: 1.7px solid #858b87;
+    border-radius: 50%;
+} /*position: relative(định vị tương đối phần tử search-icon)*/
+
+.search-box input {
+    width: 100%;
+    min-width: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--text);
+    font-size: 13px;
+}/*min-width:0 (phần tử thu nhỏ lại khi không gian bị hẹp*/
+.search-box input::placeholder {
+    color: #929792;
+} /*::placeholder (chỉnh phần chữ gợi ý "Tìm kiếm đơn hàng..."; không chỉnh chữ khi người dùng nhập vào)*/
+.order-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+} /*sắp xếp danh sách các đơn hàng theo chiều dọc*/
+.order-card {
+    min-width: 0;
+    padding: 13px;
+    border: 1px solid #eceeeb;
+    border-radius: 11px;
+    background: var(--white);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+} /*tạo từng khung riêng cho mỗi đơn hàng*/
+.order-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 8px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e8eae8;
+} /*align-items: flex-start (căn chỉnh về phía bắt dầu theo chiều dọc)*/
+/*justify-content: space-between (căn chỉnh theo trục chính)*/
+.order-header h2 {
+    font-size: 14px;
+    line-height: 1.4;
+    font-weight: 700;
+}
+.order-date {
+    margin-top: 2px;
+    color: #424742;
+    font-size: 12px;
+}
+.order-status {
+    display: none;
+    flex-shrink: 0;
+    padding: 4px 7px;
+    border-radius: 5px;
+    font-size: 11px;
+    line-height: 1.4;
+}
+.status-pending {
+    background: #fff3d9;
+    color: #91610b;
+}
+.status-shipping {
+    background: #e5efff;
+    color: #285da8;
+}
+.status-delivered {
+    background: #e2f4e9;
+    color: #197348;
+}
+.order-content {
+    display: grid;
+    grid-template-columns: 76px minmax(0, 1fr);
+    gap: 12px;
+    align-items: start;
+    padding-top: 12px;
+} /*display: grid;(chia nội dung thành hàng và cột); grid-template-columns: 76px minmax(0, 1fr);(tạo 2 cột)*/
+.book-image {
+    display: block;
+    width: 76px;
+    height: 112px;
+    border-radius: 5px;
+    object-fit: cover;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.12);
+} /*display: block; (hiển thị ảnh dưới dạng khối); object-fit: cover;(ảnh hiển thị phủ kín khung)*/
+.book-info {
+    min-width: 0;
+}
+.book-info h3 {
+    margin-bottom: 5px;
+    font-size: 13px;
+    line-height: 1.45;
+    font-weight: 700;
+    overflow-wrap: anywhere;
+} /*line-height:1.45; (chiều cao dòng 1,45 lần cỡ chữ); font-weight: 700(chữ đậm); overflow-wrap: anywhere;(ngắt chuỗi ở bất kì vị trí nào)*/
+.book-info p {
+    margin-bottom: 3px;
+    color: #303530;
+    font-size: 12px;
+}
+.order-summary {
+    display: flex;
+    grid-column: 1 / -1;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #f0f1ef;
+} /* grid-column: 1 / -1; (bắt đầu từ lưới 1 đến đường lưới cuối của grid)*/
+.total-label {
+    color: #424742;
+    font-size: 12px;
+}
+.total-price {
+    color: var(--green);
+    font-size: 17px;
+    font-weight: 700;
+    white-space: nowrap;
+} 
+.cancel-button {
+    min-width: 112px;
+    min-height: 36px;
+    padding: 7px 12px;
+    border: 1px solid #668276;
+    border-radius: 8px;
+    background: var(--white);
+    color: var(--green-dark);
+    font-size: 12px;
+}
+.cancel-button:hover {
+    background: #edf5f0;
+}/*áp dụng khi con trỏ nằm trên nút*/
+@media (min-width: 600px) {
+    .order-page {
+        width: calc(100% - 40px);
+        max-width: 1200px;
+        margin: 28px auto;
+    }
+    .page-header h1 {
+        font-size: 29px;
+    }
+    .order-tabs {
+        gap: 28px;
+    }
+    .tab {
+        padding: 12px 10px;
+        font-size: 14px;
+    }
+    .search-box {
+        height: 44px;
+    }
+    .search-box input {
+        font-size: 14px;
+    }
+    .order-card {
+        padding: 15px 18px;
+    }
+    .order-header h2 {
+        font-size: 15px;
+    }
+    .order-date {
+        font-size: 13px;
+    }
+    .order-content {
+        grid-template-columns: 94px minmax(0, 1fr) 140px;
+        gap: 16px;
+        align-items: center;
+    }
+    .book-image {
+        width: 94px;
+        height: 128px;
+    }
+    .book-info h3 {
+        font-size: 14px;
+    }
+    .book-info p {
+        font-size: 13px;
+    }
+    .order-summary {
+        grid-column: auto;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+        gap: 16px;
+        padding-top: 0;
+        border-top: none;
+        text-align: right;
+    }
+    .total-label {
+        font-size: 13px;
+    }
+    .total-price {
+        font-size: 18px;
+    }
+    .cancel-button {
+        min-width: 110px;
+        font-size: 13px;
+    }
+}
+
+
