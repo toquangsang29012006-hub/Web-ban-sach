@@ -1,12 +1,155 @@
 <!-- Trang danh mục sản phẩm -->
  <!DOCTYPE html>
- <html lang="en">
+ <html lang="vi">
  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Danh Mục Sản Phẩm</title>
+   <link rel="stylesheet" href="css/product-categories.css">
  </head>
+
  <body>
-    
+     <!-- Sử dụng flex layout để tạo webpage-->
+    <div class="flex-container">
+
+        <header class="header">
+            <!-- Logo cửa hàng và chuyển hướng đến trang chủ -->
+            <a class="header__img" href="index.html"> 
+                <img class="header__img--logo" src="images/Logo.jpg" alt="BookStore Logo"> 
+            </a>
+            <!-- Thanh điều hướng của header-->
+            <div class="header-nav">
+                <nav class="horizontal-nav">
+                    <a class="horizontal-nav__link" href="index.html">Trang chủ</a>
+                    <p> / </p>
+                    <a class="horizontal-nav__link horizontal-nav__link--active"
+                       href="product-categories.html">Danh mục sản phẩm</a>
+                </nav>
+            </div>
+        </header>
+
+        <aside class="flex-menu">
+            <section class="menu_frame">
+                <h1 class="title">Danh mục sản phẩm</h1>
+                <nav class="nav_menu">
+                    <ul class="list">
+                        <li><a class="list-item" href="#">Sách tiếng Việt</a></li>
+                        <li><a class="list-item" href="#">Sách tiếng Anh</a></li>
+                        <li><a class="list-item" href="#">Sách học ngoại ngữ</a></li>
+                    </ul>
+                </nav>
+            </section>
+
+            <section class="menu_frame">
+                <h1 class="title">Giá</h1>
+                <fieldset class="multiple_option">
+                    <label class="checkbox_label">
+                        <input type="checkbox" name="gia"><span>0đ - 100.000đ</span>
+                    </label>
+                    <label class="checkbox_label">
+                        <input type="checkbox" name="gia"><span>100.000đ - 500.000đ</span>
+                    </label>
+                    <label class="checkbox_label">
+                        <input type="checkbox" name="gia"><span>500.000đ - Trở lên</span>
+                    </label>
+                </fieldset>
+            </section>
+
+            <section class="menu_frame">
+                <h1 class="title">Loại sản phẩm</h1>
+                <fieldset class="multiple_option">
+                    <label class="checkbox_label">
+                        <input type="checkbox" name="loai"><span>Văn học</span>
+                    </label>
+                    <label class="checkbox_label">
+                        <input type="checkbox" name="loai"><span>Truyện tranh</span>
+                    </label>
+                    <label class="checkbox_label">
+                        <input type="checkbox" name="loai"><span>Từ điển</span>
+                    </label>
+                </fieldset>
+            </section>
+
+            <section class="menu_frame">
+                <h1 class="title">Nhà cung cấp</h1>
+                <fieldset class="multiple_option">
+                    <label class="checkbox_label">
+                        <input type="checkbox" name="ncc"><span>NXB Kim Đồng</span>
+                    </label>
+                    <label class="checkbox_label">
+                        <input type="checkbox" name="ncc"><span>NXB Thanh niên</span>
+                    </label>
+                    <label class="checkbox_label">
+                        <input type="checkbox" name="ncc"><span>NXB Trẻ</span>
+                    </label>
+                </fieldset>
+            </section>
+        </aside>
+
+        <main class="flex-main">
+            <div class="main_div">
+                <article class="display__card">
+                    <a class="display__card--link" href="product-detail.html">
+                        <div class="img">Ảnh bìa sách</div>
+                        <h2 class="book_name">Tên sách</h2>
+                        <p class="price">Giá tiền</p>
+                    </a>
+                </article>
+                <article class="display__card">
+                    <a class="display__card--link" href="product-detail.html">
+                        <div class="img">Ảnh bìa sách</div>
+                        <h2 class="book_name">Tên sách</h2>
+                        <p class="price">Giá tiền</p>
+                    </a>
+                </article>
+                <article class="display__card">
+                    <a class="display__card--link" href="product-detail.html">
+                        <div class="img">Ảnh bìa sách</div>
+                        <h2 class="book_name">Tên sách</h2>
+                        <p class="price">Giá tiền</p>
+                    </a>
+                </article>
+                <article class="display__card">
+                    <a class="display__card--link" href="product-detail.html">
+                        <div class="img">Ảnh bìa sách</div>
+                        <h2 class="book_name">Tên sách</h2>
+                        <p class="price">Giá tiền</p>
+                    </a>
+                </article>
+                <article class="display__card">
+                    <a class="display__card--link" href="product-detail.html">
+                        <div class="img">Ảnh bìa sách</div>
+                        <h2 class="book_name">Tên sách</h2>
+                        <p class="price">Giá tiền</p>
+                    </a>
+                </article>
+                <article class="display__card">
+                    <a class="display__card--link" href="product-detail.html">
+                        <div class="img">Ảnh bìa sách</div>
+                        <h2 class="book_name">Tên sách</h2>
+                        <p class="price">Giá tiền</p>
+                    </a>
+                </article>
+                <article class="display__card">
+                    <a class="display__card--link" href="product-detail.html">
+                        <div class="img">Ảnh bìa sách</div>
+                        <h2 class="book_name">Tên sách</h2>
+                        <p class="price">Giá tiền</p>
+                    </a>
+                </article>
+                <article class="display__card">
+                    <a class="display__card--link" href="product-detail.html">
+                        <div class="img">Ảnh bìa sách</div>
+                        <h2 class="book_name">Tên sách</h2>
+                        <p class="price">Giá tiền</p>
+                    </a>
+                </article>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p class="footer_p">Copyright &copy; Bản quyền thuộc về BookStore, 2026.</p>
+        </footer>
+    </div>
  </body>
  </html>

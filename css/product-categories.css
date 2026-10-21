@@ -1,0 +1,312 @@
+    * {
+        box-sizing: border-box;
+    }
+
+    html {
+        font-family: Optima, Arial, sans-serif;
+        font-size: 16px;
+    }
+
+    body {
+        margin: 0;
+        background: #f1f5f9;
+        color: #252525;
+        line-height: 1.5;
+    }
+
+    img {
+        display: block;
+        max-width: 100%;
+    }
+
+    a {
+        text-decoration: none;
+        font-size: 1.1rem;
+    }
+
+    .flex-container {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        width: 100%;
+        max-width: 1240px;
+        margin-inline: auto;
+        padding: 12px;
+    }
+
+    .header, .flex-menu, .flex-main, .footer {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        padding: 5px;
+        background: #fff;
+        border: 1px solid #d8dde4;
+        border-radius: 8px;
+    }
+
+    .header__img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-self: center;
+        min-width: 0;
+    }
+
+    .header__img--logo {
+        display: block;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .header-nav {
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+        min-width: 0; 
+        padding: 0 12px;
+        background: #fff;
+        border-radius: 4px;
+    }
+
+    .horizontal-nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 9px;
+        width: 100%;
+    }
+
+    .horizontal-nav__link {
+        display: inline-flex;
+        align-items: center;
+        min-width: 0;
+        padding: 0;
+        border: 0;
+        border-radius: 0;
+        background: transparent;
+
+        color: #26364b;
+        font-size: 1rem;
+        font-weight: 400;
+        text-align: left;
+        text-decoration: none;
+        overflow-wrap: anywhere;
+    }
+
+    .horizontal-nav__link:hover,
+    .horizontal-nav__link:focus-visible {
+        color: #ad1f50;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+    }
+
+    .horizontal-nav__link--active {
+        color: black;
+        font-weight: bold;
+    }
+
+    .horizontal-nav__link--active:hover, .horizontal-nav__link--active:focus-visible {
+        color: #ad1f50;
+    } 
+    .list-item:hover, .list-item:focus-visible {
+        color: orange;
+    }
+
+    .flex-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        min-width: 0;
+    }
+
+    .menu_frame {
+        min-width: 0;
+        padding: 16px;
+        background: #fff;
+        border: 1px solid #d8dde4;
+        border-radius: 8px;
+    }
+
+    .title {
+        margin: 0 0 10px;
+        font-size: 1rem;
+        line-height: 1.35;
+    }
+
+    .nav_menu, .list {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        min-width: 0;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .list li {
+        min-width: 0;
+    }
+
+    .list-item {
+        display: inline-block;
+        color: #252525;
+        font-size: 0.94rem;
+        text-decoration: none;
+        overflow-wrap: anywhere;
+    }
+
+    .multiple_option {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        min-width: 0;
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+
+    .checkbox_label {
+        display: flex;
+        align-items: flex-start;
+        gap: 8px;
+        min-width: 0;
+        color: #252525;
+        font-size: 0.94rem;
+        cursor: pointer;
+    }
+
+    .checkbox_label input[type="checkbox"] {
+        flex: 0 0 auto;
+        margin: 0.25em 0 0;
+        accent-color: #d6336c;
+    }
+
+    .checkbox_label span {
+        min-width: 0;
+        overflow-wrap: anywhere;
+    }
+
+    .flex-main {
+        min-width: 0;
+        padding: 10px;
+        background: #fff;
+        border: 1px solid #d8dde4;
+        border-radius: 8px;
+    }
+
+    .main_div {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        gap: 12px;
+        min-width: 0;
+    }
+
+    .display__card {
+        display: flex;
+        flex: 1 1 180px;
+        min-width: 0;
+        overflow: hidden;
+
+        background: #cfe2f2;
+        border: 1px solid #8995a3;
+        border-radius: 4px;
+    }
+
+    .display__card--link {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 auto;
+        min-width: 0;
+
+        color: inherit;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    .img {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex: 1 0 150px;
+        min-width: 0;
+        min-height: 150px;
+        padding: 12px 8px;
+
+        background: #cfe2f2;
+        color: #273444;
+        overflow-wrap: anywhere;
+    }
+
+    .book_name {
+        margin: 0;
+        padding: 8px 6px;
+        color: blue;
+        border-top: 1px solid #8995a3;
+        background: #dcecf8;
+        font-size: 0.95rem;
+        font-weight: 400;
+        overflow-wrap: anywhere;
+    }
+
+    .price {
+        margin: 0;
+        padding: 8px 6px;
+        border-top: 1px solid #8995a3;
+        background: #dcecf8;
+        color: rgb(216, 22, 22);
+        text-align: left;
+        font-size: 0.95rem;
+        font-weight: 700;
+        overflow-wrap: anywhere;
+    }
+
+    .footer {
+        padding: 14px 16px;
+        border: 1px solid #d8dde4;
+        border-radius: 8px;
+        background: url('images/banner-footer.png') center;
+        color: black; font-weight: bold;
+        font-size: 0.875rem;
+        text-align: center;
+    }
+
+    .footer_p {
+        margin: 0;
+    }
+
+    @media screen and (min-width: 767px) {
+        .flex-container {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .flex-container > .header,
+        .flex-container > .footer {
+            flex: 0 0 100%;
+            width: auto;
+        }
+
+        .flex-container > .flex-menu {
+            flex: 0 0 25%;
+            width: auto;
+        }
+
+        .flex-container > .flex-main {
+            flex: 1 1 0;
+            width: auto;
+        }
+
+        .header__img--logo {
+            width: clamp(170px, 22vw, 230px);
+        }
+    }
