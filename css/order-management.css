@@ -1,34 +1,126 @@
-* { 
-    box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Dancing+Script:wght@400..700&family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+* {
     margin: 0;
-    padding: 0; 
-}  /*margin=0 (phần nội dung sẽ sát viền phía ngoài, không khoảng cách); padding=0(xóa khoảng cách trong phần tử, giữa nội dung và đường viền)
-/* border-box: chiều rộng sẽ tính luôn padding và border để không vượt quá độ rộng đã đặt ra*/
-/* khai báo các màu sắc để dùng chung*/
-:root {
-    --green: #145d46;
-    --green-dark: #0e4937;
-    --text: #171b19;
-    --muted: #737a76;
-    --border: #e2e5e2;
-    --background: #f6f6f0;
-    --white: #ffffff;
-} /*:root (chọn phần tử html); đặt các tên biến để lưu màu sắc*/
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    line-height: 1.5;
-    color: var(--text);
-    background: var(--background);
-} /*nội dung trang web: định dạng kiểu chữ, cỡ chữ, khoảng cách dòng, màu chữ, nền*/
-input,
-button {
-    font: inherit;
-} /*bộ chọn input, button có thuộc tính font được kế thừa từ cha*/
-button {
-    cursor: pointer;
-} /*con trỏ sẽ thay đổi thành dang bàn tay khi di chuyển con trỏ chuột vào*/
-/*bố cục mặc định dành cho điện thoại (Mobile First)*/
+    font-family: 'Be VietNam Pro', 'serif';
+    background-color: #f8fafc;
+}
+
+.container {
+    width: 100%;
+    margin: auto;
+    padding: 0 12px;
+}
+
+.header {
+  position: relative;
+}
+
+.header .img-logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.header .nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 999;
+  background-color: black;
+  width: 100%;
+  padding: 15px 25px;
+
+}
+
+.header .nav .nav-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  position: fixed;
+  top: 0px;
+  left: -300px;
+  width: 300px;
+  height: 100%;
+  background-color: #fff;
+  transition: 0.3s ease;
+}
+
+.header .nav .show {
+  left: 0px;
+}
+
+.header .nav-list .nav-item {
+  margin-top: 50px;
+}
+
+.header .nav-list .nav-link {
+  font-size: 20px;
+  color: black;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 20px;
+  transition: 0.3s ease-in;
+}
+
+.header .nav-list .nav-link:hover {
+  background-color: yellow;
+}
+
+.header .nav-list .active {
+  background-color: green;
+}
+
+.header .nav .nav-icon {
+  display: flex;
+  align-items: center;
+}
+
+.header .nav-icon .nav-link {
+  margin-right: 12px;
+  font-size: 24px;
+  color: #fff;
+}
+
+.header .nav-icon span {
+  display: none;
+}
+
+.header .icon-start {
+  color: #fff;
+  font-size: 22px;
+}
+
+.main {
+    margin-top: 120px;
+}
+
+.main .title {
+    margin-bottom: 15px;
+}
+
+.main .option-status {
+    width: 150px;
+    height: 30px;
+    border-radius: 15px;
+    padding: 5px 10px;
+    margin-bottom: 20px;
+}
+
 .order-page {
     width: calc(100% - 24px);
     margin: 22px auto;

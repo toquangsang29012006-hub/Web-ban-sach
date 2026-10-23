@@ -4,66 +4,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quản lý đơn hàng</title> <!--xuất hiện trên thanh trình duyệt-->
-    <!-- Liên kết file HTML với file CSS -->
-    <link rel="stylesheet" href="order-management.css">
+    <title>Quản lý đơn hàng</title> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="./css/order-management.css">
 </head>
 <body>
-    <!--bắt đầu nội dung chính của trang quản lý đơn hàng -->
-    <main class="order-page">
-        <header class="page-header">
-            <h1>Quản lý đơn hàng</h1> <!--tiêu đề đầu trang trên cùng, cấp 1, nội dung hiển thị là Quản lý đơn hàng-->
-        </header>
-        <!-- Các tab lọc trạng thái đơn hàng -->
-        <nav class="order-tabs">
-            <a href="#all" class="tab active">Tất cả (3)</a> <!--thẻ a có 2 lớp: tab active(tab: cho các trên thanh nav; active: hiển thị 1 tab đang được chọn)-->
-            <a href="#pending" class="tab">Chờ xác nhận (1)</a>
-            <a href="#shipping" class="tab">Đang giao (1)</a>
-            <a href="#delivered" class="tab">Đã giao (1)</a>
-        </nav>
-        <!-- ô tìm kiếm mã đơn hàng -->
-        <div class="search-box">
-            <input type="search" placeholder="Tìm theo mã đơn hàng..."> <!--placeholder: gợi ý trong ô nhập tìm kiếm-->
-        </div>
-        <!-- chứa danh sách có 3 đơn hàng -->
-        <section class="order-list">
-            <!-- Đơn hàng thứ nhất -->
-            <article class="order-card" id="pending"> <!--tạo 1 khối để biểu diễn ĐH; gán pending ở tab chờ xác nhận-->
-                <div class="order-header"> <!--lớp để định dạng cho khu vực chứa mã đơn, ngày và trạng thái-->
-                    <div>
-                        <h2>Đơn hàng #SP10245</h2> <!--tiêu đề cấp 2, cho mã đơn-->
-                        <p class="order-date">Ngày đặt: 08/10/2026</p> <!--tạo đoạn văn bản cho Ngày đặt-->
-                    </div>
-                    <span class="order-status status-pending">Chờ xác nhận</span> <!--có 2 lớp: order-status (chung cho các nhãn trạng thái); status pendng: riêng cho "chờ xác nhận"-->
-                </div>
-
-                <div class="order-content"> <!--chi tiết của đơn hầng: ảnh; số lượng; đơn giá; tiền-->
-                    <!-- Ảnh bìa sách Đắc Nhân Tâm -->
-                    <img class="book-image" src="images/dac-nhan-tam.png" alt="Đắc Nhân Tâm">
-                    <!--img: hiển thị hình; src: đường dẫn đến file ảnh; alt sẽ dược hiển thị nếu ảnh không được tải-->
-                    <!-- Tên và thông tin của sách -->
-                    <div class="book-info">
-                        <h3>Đắc Nhân Tâm</h3> <!--tiêu đề cấp 3-->
-                        <p>Số lượng: x1</p> <!--văn bản-->
-                        <p>Đơn giá: 125.000đ</p> <!--văn bản-->
-                    </div>
-                    <!-- Tổng số tiền và nút hủy đơn -->
-                    <div class="order-summary">
-                        <div>
-                            <p class="total-label">Tổng tiền</p>
-                            <p class="total-price">125.000đ</p>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <i class="fa-solid fa-bars icon-start" id="nav-open"></i>
+                <img src="./images/Logo.jpg" alt="Logo" class="img-logo">
+                <ul class="nav-list" id="show-menu">
+                    <i class="fa-solid fa-x icon-end" id="nav-close"></i>
+                    <li class="nav-item">
+                        <a href="" class="nav-link active">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link">Danh mục sách</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">Giới thiệu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contacs" class="nav-link">Liên hệ</a>
+                    </li>
+                </ul>
+                <ul class="nav-icon">
+                    <li class="nav-item">
+                        <a href="" class="nav-link">
+                            <i class="fa-solid fa-cart-shopping"></i> <span>Giỏ hàng</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link">
+                            <i class="fa-solid fa-circle-user"></i> <span> Đăng nhập</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+    </header>
+    <main class="main">
+        <div class="container">
+             <h1 class="title">Đơn hàng</h1> 
+             <select name="" id="" class="option-status">
+                <option value="all">Tất cả</option>
+                <option value="pending">Chờ xác nhận</option>
+                <option value="shipping">Đang giao</option>
+                <option value="delivered">Đã giao</option>
+             </select>
+             <section class="list-book-order">
+                <article class="item-book-order"> 
+                    <div class="order-content"> 
+                        <img class="book-image" src="images/dac-nhan-tam.png" alt="Đắc Nhân Tâm">
+                        
+                        <div class="book-info">
+                            <h3 class="book-name">Đắc Nhân Tâm</h3>
+                            <p class="quantity">Số lượng: x1</p>
+                            <p class="book-price">Đơn giá: 125.000đ</p> 
                         </div>
-                        <button type="button" class="cancel-button">Hủy đơn</button> <!--tạo nút hủy đơn-->
                     </div>
-                </div>
             </article>
             <!-- Đơn hàng thứ hai -->
             <article class="order-card" id="shipping">
                 <div class="order-header">
                     <div>
-                        <h2>Đơn hàng #SP10231</h2>
-                        <p class="order-date">Ngày đặt: 05/10/2026</p>
-                    </div>
                     <span class="order-status status-shipping">Đang giao</span>
                 </div>
                 <div class="order-content">
@@ -109,6 +113,8 @@
                 </div>
             </article>
         </section>
+        </div>
+        
     </main>
 </body>
 </html>

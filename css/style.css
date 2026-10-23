@@ -25,7 +25,13 @@ body {
   position: relative;
 }
 
-.nav {
+.header .img-logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.header .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -39,15 +45,12 @@ body {
 
 }
 
-.header .nav ul {
-  list-style: none;
-}
-
 .header .nav .nav-list {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  list-style: none;
   position: fixed;
   top: 0px;
   left: -300px;
@@ -61,13 +64,12 @@ body {
   left: 0px;
 }
 
-
 .header .nav-list .nav-item {
   margin-top: 50px;
 }
 
 .header .nav-list .nav-link {
-  font-size: 22px;
+  font-size: 20px;
   color: black;
   font-weight: 600;
   padding: 10px 20px;
@@ -83,8 +85,9 @@ body {
   background-color: green;
 }
 
-.header .nav-icon {
+.header .nav .nav-icon {
   display: flex;
+  align-items: center;
 }
 
 .header .nav-icon .nav-link {
@@ -95,12 +98,6 @@ body {
 
 .header .nav-icon span {
   display: none;
-}
-
-.header .img-logo {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
 }
 
 .header .icon-start {
@@ -127,7 +124,6 @@ body {
   position: absolute;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
   background-size: cover;
   animation: anhDong 5s infinite;
 }
@@ -138,7 +134,6 @@ body {
   width: 100%;
   height: 100%;
   background-color: black;
-  z-index: 1;
   opacity: 0.5;
   animation: anhDong 5s infinite;
 }
@@ -148,20 +143,19 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 120px;
   padding: 0px 25px;
-  z-index: 2;
+  z-index: 1;
   animation: chuDongDoc 3s;
 }
 
 .banner .title {
-  font-size: 20px;
+  font-size: 30px;
   color: white;
   font-family: "Inria Serif", serif;
 }
 
 .banner .desc {
-  font-size: 12px;
+  font-size: 18px;
   color: white;
   font-family: "Inria Serif", serif;
   text-align: center;
@@ -184,7 +178,7 @@ body {
 
 .banner .button-products:hover {
   background-color: yellow;
-  border: 4px solid transparent;
+  border: 4px solid;
   color: black;
   transform: scale(1.1);
 }
@@ -293,7 +287,7 @@ body {
   background-color: #fff;
   padding-bottom: 12px;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
+  border-radius: 10px;
   margin-bottom: 30px;
   position: relative;
   transition: 0.4s ease;
@@ -308,12 +302,14 @@ body {
 .main .book img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
   border-radius: 5px 5px 0 0;
 }
 
 .main .book .book-infor {
   padding: 8px 10px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .main .book .book-name {

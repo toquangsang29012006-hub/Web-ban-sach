@@ -1,128 +1,103 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chi Tiết Sách - Mật Mã Học Ứng Dụng</title>
-</head>
-<body>
-
-    <header class="site-header">
-        <div class="container header-inner">
-            <a href="#" class="logo-placeholder">
-                Book
-            </a>
-
-            <nav class="main-nav">
-                <a href="#">Trang chủ</a>
-                <a href="#">Sách CNTT</a>
-                <a href="#">Khuyến mãi</a>
-                <a href="#">Liên hệ</a>
-            </nav>
-
-            <div class="header-cart">
-                Giỏ hàng (2)
-            </div>
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chi tiết sách</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css"
+      integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/product-detail.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <i class="fa-solid fa-bars icon-start" id="nav-open"></i>
+        <img src="./images/Logo.jpg" alt="Logo" class="img-logo" />
+        <ul class="nav-list" id="show-menu">
+          <i class="fa-solid fa-x icon-end" id="nav-close"></i>
+          <li class="nav-item">
+            <a href="index.html" class="nav-link active">Trang chủ</a>
+          </li>
+          <li class="nav-item">
+            <a href="" class="nav-link">Danh mục sách</a>
+          </li>
+          <li class="nav-item">
+            <a href="index.html #about" class="nav-link">Giới thiệu</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contacs" class="nav-link">Liên hệ</a>
+          </li>
+        </ul>
+        <ul class="nav-icon">
+          <li class="nav-item">
+            <a href="" class="nav-link"> <i class="fa-solid fa-cart-shopping"></i> <span>Giỏ hàng</span> </a>
+          </li>
+          <li class="nav-item">
+            <a href="" class="nav-link"> <i class="fa-solid fa-circle-user"></i> <span> Đăng nhập</span> </a>
+          </li>
+        </ul>
+      </nav>
     </header>
 
-    <div class="container">
-        <div class="product-page-wrapper">
-            <nav class="breadcrumb">
-                <a href="#">Trang chủ</a> > <a href="#">Sách CNTT</a> > <a href="#">An toàn thông tin</a> > Mật Mã Học Ứng Dụng
-            </nav>
+    <main class="main">
+      <div class="container">
+        <article class="item-book">
+          <h1 class="book-name">Sách Tiếng Anh</h1>
+          <hr />
+          <img src="./images/book-discount-1.jpg" alt="book" />
+          <hr />
+          <p class="price">Giá tiền: <span>185.000đ</span></p>
+          <form class="quanlity">
+            <label for="quanlity">Số lượng: </label>
+            <input type="number" id="quanlity" class="quantity-book" value="1" min="1" />
+          </form>
+          <div class="buttons">
+            <button class="btn-add-cart">Thêm vào giỏ hàng</button>
+            <button class="btn-buy-now">Mua ngay</button>
+          </div>
+        </article>
+      </div>
+    </main>
 
-            <main class="product-main">
-                <div class="product-gallery">
-                    <img src="https://via.placeholder.com/350x500/0056b3/ffffff?text=Bia+Sach+Mau" alt="Bìa sách">
-                </div>
-
-                <div class="product-info">
-                    <h1 class="product-title">Mật Mã Học Ứng Dụng & Cấu Trúc Dữ Liệu</h1>
-                    
-                    <div class="product-meta">
-                        Tác giả: <span>Trần Văn B</span> | 
-                        Nhà xuất bản: <span>NXB Đại Học</span> |
-                        Hình thức: <span>Bìa mềm</span>
-                    </div>
-
-                    <div class="product-price">185.000 ₫</div>
-
-                    <div class="product-short-desc">
-                        Cuốn sách cung cấp kiến thức nền tảng vững chắc về an toàn thông tin, các chuẩn mã hóa hiện đại (như RSA, ML-KEM) và cách triển khai cấu trúc dữ liệu tối ưu trong thực tế bằng C/C++ và Java.
-                    </div>
-
-                    <div class="purchase-actions">
-                        <input type="number" class="quantity-input" value="1" min="1">
-                        <button class="btn-add-cart">Thêm vào giỏ hàng</button>
-                        <button class="btn-buy-now">Mua ngay</button>
-                    </div>
-                </div>
-            </main>
-
-            <section class="product-details-tabs">
-                <h2 class="section-title">Thông tin chi tiết</h2>
-                <table class="specs-table">
-                    <tbody>
-                        <tr>
-                            <th>Công ty phát hành</th>
-                            <td>IT Book Company</td>
-                        </tr>
-                        <tr>
-                            <th>Ngày xuất bản</th>
-                            <td>2025-10</td>
-                        </tr>
-                        <tr>
-                            <th>Kích thước</th>
-                            <td>16 x 24 cm</td>
-                        </tr>
-                        <tr>
-                            <th>Số trang</th>
-                            <td>450 trang</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <h2 class="section-title">Mô tả sản phẩm</h2>
-                <article class="content-desc">
-                    <p>Nội dung sách được thiết kế chuẩn mực dành cho sinh viên và lập trình viên. Chương 1 bắt đầu với các khái niệm cơ bản về cấu trúc dữ liệu (Array, Linked List, Tree). Các chương sau đi sâu vào hệ thống mật mã, thuật toán mã hóa đối xứng, bất đối xứng và các ứng dụng thực tế trong an toàn thông tin.</p>
-                    <br>
-                    <p>Sách đi kèm với nhiều bài tập thực hành và source code mẫu giúp người đọc dễ dàng đối chiếu và luyện tập kỹ năng lập trình.</p>
-                </article>
-            </section>
+    <footer class="footer" id="contacs">
+      <aside class="address">
+        <h2 class="title">Địa chỉ</h2>
+        <figure>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2336.0986733910663!2d105.76863478138982!3d10.030553578629661!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a0895a51d60719%3A0x9d76b0035f6d53d0!2zxJDhuqFpIGjhu41jIEPhuqduIFRoxqE!5e0!3m2!1svi!2s!4v1792245297017!5m2!1svi!2s"
+            width="350"
+            height="300"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+          ></iframe>
+        </figure>
+        <div class="information">
+          <i class="fa-solid fa-location-dot"></i>
+          <p class="text">Khu II, Đ. 3 Tháng 2, Ninh Kiều, Cần Thơ, Việt Nam</p>
         </div>
-    </div>
-
-    <footer class="site-footer">
-        <div class="container">
-            <div class="footer-inner">
-                <div class="footer-col">
-                    <h3>Về ITBook</h3>
-                    <p>Hệ thống nhà sách chuyên cung cấp các đầu sách về Lập trình, An toàn thông tin, Khoa học Máy tính hàng đầu.</p>
-                </div>
-
-                <div class="footer-col">
-                    <h3>Hỗ Trợ Khách Hàng</h3>
-                    <ul>
-                        <li><a href="#">Hướng dẫn mua hàng</a></li>
-                        <li><a href="#">Chính sách đổi trả</a></li>
-                        <li><a href="#">Chính sách bảo mật</a></li>
-                        <li><a href="#">Theo dõi đơn hàng</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <h3>Liên Hệ</h3>
-                    <p>Địa chỉ: 3/2, Xuân Khánh, Ninh Kiều, Cần Thơ</p>
-                    <p>Điện thoại: </p>
-                    <p>Email: </p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Bản quyền thuộc về Book Store.</p>
-            </div>
-        </div>
+      </aside>
+      <section class="contacs">
+        <h2 class="title">Liên hệ</h2>
+        <ul class="list-contacs">
+          <li class="item-contacs">
+            <i class="fa-solid fa-phone"></i>
+            <p>0123456789</p>
+          </li>
+          <li class="item-contacs">
+            <i class="fa-solid fa-envelope"></i>
+            <p>admin123@gmail.com</p>
+          </li>
+        </ul>
+      </section>
     </footer>
 
-</body>
+    <script src="./js/script.js"></script>
+  </body>
 </html>

@@ -1,95 +1,110 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thông tin tài khoản</title>  <!--tiêu đề trang trên tab-->
-    <link rel="stylesheet" href="accout.css">  <!--liên kết file HTML với file CSS-->
-</head>
-<body>
-    <!-- phần nội dung chính của trang -->
-    <main class="account-page">  <!--tạo khu vực nội dung chính của trang TK-->
-        <!-- tiêu đề trang -->
-        <header class="page-header"> <!--tạo đầu trang-->
-            <h1>Thông tin tài khoản</h1> <!--h1: hiển thị TTTK là cấp cao nhất trong trang -->
-        </header>
-        <!-- khung chứa thông tin tài khoản -->
-        <section class="account-card"> <!--khu vực section bao gồm: avatar, tên, họ và tên, emil, ngày sinh, sđt-->
-            <!-- ảnh đại diện, tên người dùng -->
-            <div class="profile"> <!--gồm avatar và tên người dùng-->
-                <div class="avatar-wrapper"> <!--tạo khung của avatar-->
-                    <!-- hiển thị ảnh đại diện trong thư mục images -->
-                    <img src="images/avatar.png" 
-                         alt="Ảnh đại diện"
-                         class="avatar"> <!--<img..> hiển thị hình ảnh-->
-                </div>
-                <h2 class="profile-name">Thái Bình Bình</h2> <!--tiêu đề h2(cấp 2) là tên-->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thông tin tài khoản</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css"
+      integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/accout.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="nav">
+          <i class="fa-solid fa-bars icon-start" id="nav-open"></i>
+          <img src="./images/Logo.jpg" alt="Logo" class="img-logo" />
+          <ul class="nav-list" id="show-menu">
+            <i class="fa-solid fa-x icon-end" id="nav-close"></i>
+            <li class="nav-item">
+              <a href="" class="nav-link active">Trang chủ</a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link">Danh mục sách</a>
+            </li>
+            <li class="nav-item">
+              <a href="#about" class="nav-link">Giới thiệu</a>
+            </li>
+            <li class="nav-item">
+              <a href="#contacs" class="nav-link">Liên hệ</a>
+            </li>
+          </ul>
+          <ul class="nav-icon">
+            <li class="nav-item">
+              <a href="" class="nav-link"> <i class="fa-solid fa-cart-shopping"></i> <span>Giỏ hàng</span> </a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link"> <i class="fa-solid fa-circle-user"></i> <span> Đăng nhập</span> </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="main">
+      <div class="container">
+        <h1 class="title">Thông tin tài khoản</h1>
+        <section class="account-card">
+          <img src="images/avatar.png" alt="Ảnh đại diện" class="avatar" />
+          <section class="account-infor">
+            <div class="account">
+              <h4 class="key">Họ và tên:</h4>
+              <p class="value">Nguyễn Văn A</p>
             </div>
-            <!-- biểu mẫu thông tin cá nhân -->
-            <form class="account-form"> <!--biểu mẫu gồm họ tên, email, sđt, ngày sinh, địa chỉ-->
-                <!-- chia các trường nhập liệu thành hai cột -->
-                <div class="form-grid"> <!--họ tên, email, sđt, ngày sinh, css sẽ chia thành 2 cột-->
-                    <!-- trường nhập họ và tên -->
-                    <div class="form-group"> <!--lớp formgroup gồm nhãn và ô nhập-->
-                        <label for="fullname">Họ và tên</label> <!--fullname: liên kết label với input-->
-                        <input type="text" id="fullname" 
-                               name="fullname" value="Thái Bình Bình"> <!--name: xác định tên cuae dữ liệu khi gửi đi (fullname=Thái Bình Bình) -->
-                    </div>
-                    <!-- Trường hiển thị email-->
-                    <div class="form-group">
-                        <label for="email">Email</label> <!--"email" dùng để liên kết-->
-                        <input type="email" id="email" name="email"
-                               value="binh2107z@email.com"> 
-                    </div>
-                    <!-- trường nhập số điện thoại -->
-                    <div class="form-group">
-                        <label for="phone">Số điện thoại</label>
-                        <input type="tel" id="phone" name="phone"
-                               value="0912 345 678">
-                    </div>
-                    <!-- Trường nhập ngày sinh -->
-                    <div class="form-group">
-                        <label for="birthday">Ngày sinh</label>
-                        <input type="text" id="birthday" name="birthday"
-                               value="12/12/2005">
-                    </div>
-                </div>
-                <!-- khu vực hiển thị địa chỉ nhận hàng -->
-                <section class="address-section"> <!--tạo 1 khung riêng cho phần địa chỉ-->
-                    <h3>Địa chỉ nhận hàng</h3> <!--tiêu đề cấp 3-->
-                    <!-- thông tin địa chỉ mặc định -->
-                    <div class="address-card"> <!--có biểu tượng vị trí và thông tin địa chỉ-->
-                        <!-- biểu tượng vị trí được vẽ bằng SVG -->
-                        <div class="location-icon"> <!--biểu tượng vị trí-->
-                            <svg viewBox="0 0 24 24" fill="none"> <!--viewbox (xđ tọa độ: 0(bắt đầu x); 0(bắt đầu y); chiều rộng: 24; chiệu dài: 24)| none: không tô màu-->
-                                <path d="M20 10C20 15 12 22 12 22S4 15 4 10A8 8 0 1 1 20 10Z"
-                                      stroke="currentColor" stroke-width="1.7"/> <!--path vẽ hình bằng lệnh tọa độ; stroke màu của đường viền hình vẽ; dùng currentColor sẽ sử dụng cùng màu với css; độ dày đường viền là 1.7-->.
-                                <circle cx="12" cy="10" r="2.7"  
-                                        stroke="currentColor" stroke-width="1.7"/> <!--vẽ hình tròn nhỏ phía bên trong cx: tâm theo chiều ngang; cy: tâm theo chiều dọc; r: bán kính-->
-                            </svg>
-                        </div>
-                        <!-- nội dung địa chỉ -->
-                        <div class="address-info"> <!--nhóm dòng văn bản đc-->
-                            <p class="address-label">Địa chỉ mặc định</p>
-                            <p class="address-text">
-                                3/2, Ninh Kiều, Cần Thơ
-                            </p>
-                        </div>
-                    </div>
-                </section>
-                <!-- các nút thao tác ở phía cuối biểu mẫu -->
-                <div class="form-actions"> <!--tạo khu vực cho 2 nút-->
-                    <!-- "reset" Đặt lại các trường về giá trị ban đầu khi mình nhấn nút-->
-                    <button type="reset" class="button button-cancel">
-                        Hủy thay đổi
-                    </button>
-                    <!-- Nút giao diện lưu thông tin -->
-                    <button type="button" class="button button-save">
-                        Lưu thay đổi
-                    </button> <!--nút hủy và lưu dùng tên class: button; button-save: dành riêng cho save(hiện khi đưa chuột vào); button-cancel: cho nút hủy(khi đưa chuột vào)-->
-                </div>
-            </form>
+            <div class="account">
+              <h4 class="key">SĐT:</h4>
+              <p class="value">0123456789</p>
+            </div>
+            <div class="account">
+              <h4 class="key">Ngày sinh:</h4>
+              <p class="value">01/01/2026</p>
+            </div>
+          </section>
+          <div class="address-user">
+            <i class="fa-solid fa-location-dot"></i>
+            <p class="address">Khu II, Đ. 3 Tháng 2, Ninh Kiều, Cần Thơ, Việt Nam</p>
+          </div>
         </section>
+      </div>
     </main>
-</body>
+    <footer class="footer" id="contacs">
+      <div class="container">
+        <aside class="address">
+          <h2 class="title">Địa chỉ</h2>
+          <figure>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2336.0986733910663!2d105.76863478138982!3d10.030553578629661!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a0895a51d60719%3A0x9d76b0035f6d53d0!2zxJDhuqFpIGjhu41jIEPhuqduIFRoxqE!5e0!3m2!1svi!2s!4v1792245297017!5m2!1svi!2s"
+              width="350"
+              height="300"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+            ></iframe>
+          </figure>
+          <div class="information">
+            <i class="fa-solid fa-location-dot"></i>
+            <p class="text">Khu II, Đ. 3 Tháng 2, Ninh Kiều, Cần Thơ, Việt Nam</p>
+          </div>
+        </aside>
+        <section class="contacs">
+          <h2 class="title">Liên hệ</h2>
+          <ul class="list-contacs">
+            <li class="item-contacs">
+              <i class="fa-solid fa-phone"></i>
+              <p>0123456789</p>
+            </li>
+            <li class="item-contacs">
+              <i class="fa-solid fa-envelope"></i>
+              <p>admin123@gmail.com</p>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </footer>
+  </body>
 </html>

@@ -4,71 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Giỏ hàng</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="css/cart.css">
     
 </head>
-<body>
+<body>  
+    <header class="header">
+        <nav class="nav">
+            <i class="fa-solid fa-bars icon-start" id="nav-open"></i>
+            <img src="./images/Logo.jpg" alt="Logo" class="img-logo">
+            <ul class="nav-list" id="show-menu">
+                <i class="fa-solid fa-x icon-end" id="nav-close"></i>
+                <li class="nav-item">
+                    <a href="" class="nav-link active">Trang chủ</a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link">Danh mục sách</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">Giới thiệu</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contacs" class="nav-link">Liên hệ</a>
+                </li>
+            </ul>
+            <ul class="nav-icon">
+                <li class="nav-item">
+                    <a href="" class="nav-link">
+                        <i class="fa-solid fa-cart-shopping"></i> <span>Giỏ hàng</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link">
+                        <i class="fa-solid fa-circle-user"></i> <span> Đăng nhập</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>  
+    </header>
+    <main class="main">
+        <div class="container">
+            <div class="main-content">
+                <p class="show d-none">Không có sản phẩm nào được chọn</p>
+                <article class="item-product">
+                    <input type="checkbox">
+                    <img src="./images/book-new-1.webp" alt="" class="img-product">
+                    <div class="product-info">
+                        <h4 class="book-name"> Sách 1</h4>
+                        <p class="book-price">120.000đ</p>
+                    </div>
+                    <p class="so-luong">1</p>
+                    <button class="btn-delete">Xóa</button>
+                </article>
+                <article class="item-product">
+                    <input type="checkbox">
+                    <img src="./images/book-new-1.webp" alt="" class="img-product">
+                    <div class="product-info">
+                        <h4 class="book-name"> Sách 1</h4>
+                        <p class="book-price">120.000đ</p>
+                    </div>
+                    <p class="so-luong">1</p>
+                    <button class="btn-delete">Xóa</button>
+                </article>
+            </div>
+        </div>
+    </main>
 
-    <div class="cart-container">
         
-        
-        <div class="row-header">
-            <span>←</span>
-            <span class="header-tittle">Giỏ hàng</span>
-            <span></span>
-           
+    <footer class="footer">
+        <form class="checked-all">
+            <label for="all">Tất cả</label>
+            <input type="checkbox" id="all">
+        </form>
+        <div class="sum-buy">
+            <p>Tổng: <span class="sum-price">120.000đ</span></p>
+            <button class="btn-buy">Mua hàng</button>
         </div>
-
-       
-        <div class="row-shop-title">
-            <div class="shop-left">
-                <input type="checkbox">
-                <span class="shop-name"> Nhóm 3 &gt;</span>
-            </div>
-            <button class="edit-btn">Xóa</button>
-        </div>
-
-       
-        <div class="row-product">
-            <input type="checkbox" style="margin-top: 5px;">
-            
-            <div class="product-img-wrapper">
-                <span>hình ảnh</span>
-                <div class="stock-badge">Chỉ còn 4</div>
-            </div>
-
-            <div class="product-info">
-                <div class="product-name"> Sách [tên sách]</div>
-                <div class="product-variant">Đen</div>
-                <div class="product-price">.000VNĐ</div>
-            </div>
-
-            <div class="quantity-box">
-                <button>-</button>
-                <span>1</span>
-                <button>+</button>
-            </div>
-        </div>
-
-        
-        <div class="row-voucher">
-            <span>Voucher shop</span>
-            <span style="color: #888;">></span>
-        </div>
-
-       
-        <div class="row-footer">
-            <div style="display: flex; align-items: center; gap: 8px;">
-                <input type="checkbox" id="all">
-                <label for="all" style="cursor: pointer;">Tất cả</label>
-            </div>
-            <div style="display: flex; align-items: center; gap: 12px;">
-                <div>Tổng: <span class="total-price">.000VNĐ</span></div>
-                <button class="buy-btn">Mua hàng</button>
-            </div>
-        </div>
-
-    </div>
+    </footer>
 
 </body>
 </html>
