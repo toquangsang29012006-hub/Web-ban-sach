@@ -1,172 +1,152 @@
 <!-- Trang danh mục sản phẩm -->
- <!DOCTYPE html>
- <html lang="vi">
- <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Danh Mục Sản Phẩm</title>
-   <link rel="stylesheet" href="css/product-categories.css">
- </head>
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Danh Mục Sản Phẩm</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css"
+      integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/product-categories.css" />
+  </head>
 
- <body>
-     <!-- Sử dụng flex layout để tạo webpage-->
-    <div class="flex-container">
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="nav">
+          <i class="fa-solid fa-bars icon-start" id="nav-open"></i>
+          <img src="./images/Logo.jpg" alt="Logo" class="img-logo" />
+          <ul class="nav-list" id="show-menu">
+            <i class="fa-solid fa-x icon-end" id="nav-close"></i>
+            <li class="nav-item">
+              <a href="" class="nav-link active">Trang chủ</a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link">Danh mục sách</a>
+            </li>
+            <li class="nav-item">
+              <a href="#about" class="nav-link">Giới thiệu</a>
+            </li>
+            <li class="nav-item">
+              <a href="#contacs" class="nav-link">Liên hệ</a>
+            </li>
+          </ul>
+          <ul class="nav-icon">
+            <li class="nav-item">
+              <a href="" class="nav-link"> <i class="fa-solid fa-cart-shopping"></i> <span>Giỏ hàng</span> </a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link"> <i class="fa-solid fa-circle-user"></i> <span> Đăng nhập</span> </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-        <header class="header">
-            <!-- Logo cửa hàng và chuyển hướng đến trang chủ -->
-            <a class="header__img" href="index.html"> 
-                <img class="header__img--logo" src="images/Logo.jpg" alt="BookStore Logo"> 
+    <main class="main">
+      <div class="container">
+        <h1 class="title">Danh mục sản phẩm</h1>
+        <select name="" id="" class="option">
+          <option value="">Giá tăng dần</option>
+          <option value="">Giá giảm dần</option>
+          <option value="">Từ A->Z</option>
+          <option value="">Từ Z->A</option>
+        </select>
+        <hr />
+        <div class="list-book">
+          <article class="item-book">
+            <img src="./images/book-new-1.webp" alt="book-new-1" />
+
+            <div class="book-infor">
+              <h4 class="book-name">Sách 1</h4>
+              <p class="price">100,000đ</p>
+            </div>
+          </article>
+          <article class="item-book">
+            <a href="">
+              <img src="./images/book-new-1.webp" alt="book-new-1" />
             </a>
-            <!-- Thanh điều hướng của header-->
-            <div class="header-nav">
-                <nav class="horizontal-nav">
-                    <a class="horizontal-nav__link" href="index.html">Trang chủ</a>
-                    <p> / </p>
-                    <a class="horizontal-nav__link horizontal-nav__link--active"
-                       href="product-categories.html">Danh mục sản phẩm</a>
-                </nav>
+            <div class="book-infor">
+              <h4 class="book-name">Sách 1</h4>
+              <p class="price">100,000đ</p>
             </div>
-        </header>
-
-        <aside class="flex-menu">
-            <section class="menu_frame">
-                <h1 class="title">Danh mục sản phẩm</h1>
-                <nav class="nav_menu">
-                    <ul class="list">
-                        <li><a class="list-item" href="#">Sách tiếng Việt</a></li>
-                        <li><a class="list-item" href="#">Sách tiếng Anh</a></li>
-                        <li><a class="list-item" href="#">Sách học ngoại ngữ</a></li>
-                    </ul>
-                </nav>
-            </section>
-
-            <section class="menu_frame">
-                <h1 class="title">Giá</h1>
-                <fieldset class="multiple_option">
-                    <label class="checkbox_label">
-                        <input type="checkbox" name="gia"><span>0đ - 100.000đ</span>
-                    </label>
-                    <label class="checkbox_label">
-                        <input type="checkbox" name="gia"><span>100.000đ - 500.000đ</span>
-                    </label>
-                    <label class="checkbox_label">
-                        <input type="checkbox" name="gia"><span>500.000đ - Trở lên</span>
-                    </label>
-                </fieldset>
-            </section>
-
-            <section class="menu_frame">
-                <h1 class="title">Loại sản phẩm</h1>
-                <fieldset class="multiple_option">
-                    <label class="checkbox_label">
-                        <input type="checkbox" name="loai"><span>Văn học</span>
-                    </label>
-                    <label class="checkbox_label">
-                        <input type="checkbox" name="loai"><span>Truyện tranh</span>
-                    </label>
-                    <label class="checkbox_label">
-                        <input type="checkbox" name="loai"><span>Từ điển</span>
-                    </label>
-                </fieldset>
-            </section>
-
-            <section class="menu_frame">
-                <h1 class="title">Nhà cung cấp</h1>
-                <fieldset class="multiple_option">
-                    <label class="checkbox_label">
-                        <input type="checkbox" name="ncc"><span>NXB Kim Đồng</span>
-                    </label>
-                    <label class="checkbox_label">
-                        <input type="checkbox" name="ncc"><span>NXB Thanh niên</span>
-                    </label>
-                    <label class="checkbox_label">
-                        <input type="checkbox" name="ncc"><span>NXB Trẻ</span>
-                    </label>
-                </fieldset>
-            </section>
-        </aside>
-
-        <main class="flex-main">
-            <div class="main_div">
-                <article class="display__card">
-                    <a class="display__card--link" href="product-detail.html">
-                        <div>
-                            <img src="images/tieng_viet_lop1.png" alt="TiengVietLop1" class="book_img" type="image/png">
-                        </div>
-                        <h2 class="book_name">Tiếng Việt lớp 1</h2>
-                        <p class="price">Unavailable</p>
-                    </a>
-                </article>
-                <article class="display__card">
-                    <a class="display__card--link" href="product-detail.html">
-                        <div>
-                            <img src="#" alt="Ảnh bìa sách" class="book_img" type="image/png">
-                        </div>
-                        <h2 class="book_name">Tên sách</h2>
-                        <p class="price">Giá tiền</p>
-                    </a>
-                </article>
-                <article class="display__card">
-                    <a class="display__card--link" href="product-detail.html">
-                        <div>
-                            <img src="#" alt="Ảnh bìa sách" class="book_img" type="image/png">
-                        </div>
-                        <h2 class="book_name">Tên sách</h2>
-                        <p class="price">Giá tiền</p>
-                    </a>
-                </article>
-                <article class="display__card">
-                    <a class="display__card--link" href="product-detail.html">
-                        <div>
-                            <img src="#" alt="Ảnh bìa sách" class="book_img" type="image/png">
-                        </div>
-                        <h2 class="book_name">Tên sách</h2>
-                        <p class="price">Giá tiền</p>
-                    </a>
-                </article>
-                <article class="display__card">
-                    <a class="display__card--link" href="product-detail.html">
-                        <div>
-                            <img src="images/Oxford_Dictionary.png" alt="Oxford Dictionary" class="book_img" type="image/png">
-                        </div>
-                        <h2 class="book_name">Từ điển Oxford</h2>
-                        <p class="price">300,000đ</p>
-                    </a>
-                </article>
-                <article class="display__card">
-                    <a class="display__card--link" href="product-detail.html">
-                        <div>
-                            <img src="#" alt="Ảnh bìa sách" class="book_img" type="image/png">
-                        </div>
-                        <h2 class="book_name">Tên sách</h2>
-                        <p class="price">Giá tiền</p>
-                    </a>
-                </article>
-                
-                <article class="display__card">
-                    <a class="display__card--link" href="product-detail.html">
-                        <div>
-                            <img src="#" alt="Ảnh bìa sách" class="book_img" type="image/png">
-                        </div>
-                        <h2 class="book_name">Tên sách</h2>
-                        <p class="price">Giá tiền</p>
-                    </a>
-                </article>
-                <article class="display__card">
-                    <a class="display__card--link" href="product-detail.html">
-                        <div>
-                            <img src="#" alt="Ảnh bìa sách" class="book_img" type="image/png">
-                        </div>
-                        <h2 class="book_name">Tên sách</h2>
-                        <p class="price">Giá tiền</p>
-                    </a>
-                </article>
+          </article>
+          <article class="item-book">
+            <a href="">
+              <img src="./images/book-new-1.webp" alt="book-new-1" />
+            </a>
+            <div class="book-infor">
+              <h4 class="book-name">Sách 1</h4>
+              <p class="price">100,000đ</p>
             </div>
-        </main>
-
-        <footer class="footer">
-            <p class="footer_p">Copyright &copy; Bản quyền thuộc về Nhà sách N3, 2026.</p>
-        </footer>
-    </div>
- </body>
- </html>
+          </article>
+          <article class="item-book">
+            <a href="">
+              <img src="./images/book-new-1.webp" alt="book-new-1" />
+            </a>
+            <div class="book-infor">
+              <h4 class="book-name">Sách 1</h4>
+              <p class="price">100,000đ</p>
+            </div>
+          </article>
+          <article class="item-book">
+            <a href="">
+              <img src="./images/book-new-1.webp" alt="book-new-1" />
+            </a>
+            <div class="book-infor">
+              <h4 class="book-name">Sách 1</h4>
+              <p class="price">100,000đ</p>
+            </div>
+          </article>
+          <article class="item-book">
+            <a href="">
+              <img src="./images/book-new-1.webp" alt="book-new-1" />
+            </a>
+            <div class="book-infor">
+              <h4 class="book-name">Sách 1</h4>
+              <p class="price">100,000đ</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </main>
+    <footer class="footer" id="contacs">
+      <aside class="address">
+        <h2 class="title">Địa chỉ</h2>
+        <figure>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2336.0986733910663!2d105.76863478138982!3d10.030553578629661!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a0895a51d60719%3A0x9d76b0035f6d53d0!2zxJDhuqFpIGjhu41jIEPhuqduIFRoxqE!5e0!3m2!1svi!2s!4v1792245297017!5m2!1svi!2s"
+            width="350"
+            height="300"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+          ></iframe>
+        </figure>
+        <div class="information">
+          <i class="fa-solid fa-location-dot"></i>
+          <p class="text">Khu II, Đ. 3 Tháng 2, Ninh Kiều, Cần Thơ, Việt Nam</p>
+        </div>
+      </aside>
+      <section class="contacs">
+        <h2 class="title">Liên hệ</h2>
+        <ul class="list-contacs">
+          <li class="item-contacs">
+            <i class="fa-solid fa-phone"></i>
+            <p>0123456789</p>
+          </li>
+          <li class="item-contacs">
+            <i class="fa-solid fa-envelope"></i>
+            <p>admin123@gmail.com</p>
+          </li>
+        </ul>
+      </section>
+    </footer>
+  </body>
+</html>
