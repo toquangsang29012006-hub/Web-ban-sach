@@ -1,172 +1,434 @@
 <!-- Trang danh mục sản phẩm -->
- <!DOCTYPE html>
- <html lang="vi">
- <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Danh Mục Sản Phẩm</title>
-   <link rel="stylesheet" href="css/product-categories.css">
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh Mục Sản Phẩm</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css"
+      integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/product-categories.css">
  </head>
 
  <body>
-     <!-- Sử dụng flex layout để tạo webpage-->
-    <div class="flex-container">
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <i class="fa-solid fa-bars icon-start" id="nav-open"></i>
+                <img src="./images/Logo.jpg" alt="Logo" class="img-logo" />
+                <ul class="nav-list" id="show-menu">
+                    <i class="fa-solid fa-x icon-end" id="nav-close"></i>
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="product-categories.html" class="nav-link active">Danh mục sách</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html#about" class="nav-link">Giới thiệu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html#contacs" class="nav-link">Liên hệ</a>
+                    </li>
+                </ul>
+                <ul class="nav-icon">
+                    <li class="nav-item">
+                        <a href="cart.html" class="nav-link"> <i class="fa-solid fa-cart-shopping"></i> <span>Giỏ hàng</span> </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="login.html" class="nav-link"> <i class="fa-solid fa-circle-user"></i> <span> Đăng nhập</span> </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-        <header class="header">
-            <!-- Logo cửa hàng và chuyển hướng đến trang chủ -->
-            <a class="header__img" href="index.html"> 
-                <img class="header__img--logo" src="images/Logo.jpg" alt="BookStore Logo"> 
-            </a>
-            <!-- Thanh điều hướng của header-->
-            <div class="header-nav">
-                <nav class="horizontal-nav">
-                    <a class="horizontal-nav__link" href="index.html">Trang chủ</a>
-                    <p> / </p>
-                    <a class="horizontal-nav__link horizontal-nav__link--active"
-                       href="product-categories.html">Danh mục sản phẩm</a>
-                </nav>
+    <aside class="menu">
+        <section class="menu_frame">
+            <h1 class="title"><i class="fa-solid fa-bars"></i> Danh mục sản phẩm</h1>
+            <nav class="nav_menu">
+                <ul class="list">
+                    <li><a class="list-item" href="#sach-tieng-viet">Sách tiếng Việt</a></li>
+                    <li><a class="list-item" href="#sach-tieng-anh">Sách tiếng Anh</a></li>
+                    <li><a class="list-item" href="#sach-hoc-ngoai-ngu">Sách học ngoại ngữ</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <section class="menu_frame">
+            <h1 class="title"><i class="fa-solid fa-tags"></i> Giá</h1>
+            <fieldset class="multiple_option">
+                <label class="checkbox_label">
+                    <input class="price_option" onclick="filter()" type="checkbox" name="gia" value="0-100000">0đ - 100.000đ
+                </label>
+                <label class="checkbox_label">
+                    <input class="price_option" onclick="filter()" type="checkbox" name="gia" value="100000-500000">100.000đ - 500.000đ
+                </label>
+                <label class="checkbox_label">
+                    <input class="price_option" onclick="filter()" type="checkbox" name="gia" value="500000-900000">500.000đ - 900.000đ
+                </label>
+                <label class="checkbox_label">
+                    <input class="price_option" onclick="filter()" type="checkbox" name="gia" value="900000-plus">900.000đ - Trở lên
+                </label>
+            </fieldset>
+        </section>
+
+        <section class="menu_frame">
+            <h1 class="title"><i class="fa-solid fa-filter"></i> Loại sản phẩm</h1>
+            <fieldset class="multiple_option">
+                <label class="checkbox_label">
+                    <input class="loai_option" onclick="filter()" type="checkbox" name="loai" value="Văn học">Văn học
+                </label>
+                <label class="checkbox_label">
+                    <input class="loai_option" onclick="filter()" type="checkbox" name="loai" value="SGK">SGK
+                </label>
+                <label class="checkbox_label">
+                    <input class="loai_option" onclick="filter()" type="checkbox" name="loai" value="Từ điển">Từ điển
+                </label>
+                <label class="checkbox_label">
+                    <input class="loai_option" onclick="filter()" type="checkbox" name="loai" value="Khác">Khác
+                </label>
+            </fieldset>
+        </section>
+
+        <section class="menu_frame">
+            <h1 class="title"><i class="fa-solid fa-book-open"></i> Nhà cung cấp</h1>
+            <fieldset class="multiple_option">
+                <label class="checkbox_label">
+                    <input class="ncc_option" onclick="filter()" type="checkbox" name="ncc" value="NXB Văn học">NXB Văn học
+                </label>
+                <label class="checkbox_label">
+                    <input class="ncc_option" onclick="filter()" type="checkbox" name="ncc" value="NXB Giáo dục">NXB Giáo dục
+                </label>
+                <label class="checkbox_label">
+                    <input class="ncc_option" onclick="filter()" type="checkbox" name="ncc" value="NXB Dân trí">NXB Dân trí
+                </label>
+                <label class="checkbox_label">
+                    <input class="ncc_option" onclick="filter()" type="checkbox" name="ncc" value="NXB Đồng Nai">NXB Đồng Nai
+                </label>
+                <label class="checkbox_label">
+                    <input class="ncc_option" onclick="filter()" type="checkbox" name="ncc" value="NXB Trẻ">NXB Trẻ
+                </label>
+                <label class="checkbox_label">
+                    <input class="ncc_option" onclick="filter()" type="checkbox" name="ncc" value="Khác">Khác
+                </label>
+            </fieldset>
+        </section>
+    </aside>
+
+    <main class="main">
+        <div class="list-book">
+            <article class="item-book" data-danhmuc="sach-tieng-viet" data-loai="Văn học" data-ncc="NXB Văn học">
+                <img src="./images/book-new-1.webp" alt="book-new-1" />
+                <div class="book-infor">
+                    <h4 class="book-name">Sách 1</h4>
+                    <p class="price">100,000đ</p>
+                </div>
+                <div class="button">
+                    <a href="" class="button-link">Xem thêm</a>
+                </div>
+                <div class="provide">
+                    <p class="new">New</p>
+                </div>
+            </article>
+            <article class="item-book" data-danhmuc="sach-tieng-viet" data-loai="Văn học" data-ncc="NXB Văn học">
+                <img src="./images/book-new-2.webp" alt="book-new-1" />
+                <div class="book-infor">
+                    <h4 class="book-name">Sách 2</h4>
+                    <p class="price">150,000đ</p>
+                </div>
+                <div class="button">
+                    <a href="" class="button-link">Xem thêm</a>
+                </div>
+                <div class="provide">
+                    <p class="new">New</p>
+                </div>
+            </article>
+            <article class="item-book" data-danhmuc="sach-tieng-viet" data-loai="Văn học" data-ncc="NXB Văn học">
+                <img src="./images/book-new-3.webp" alt="book-new-1" />
+                <div class="book-infor">
+                    <h4 class="book-name">Sách 3</h4>
+                    <p class="price">320,000đ</p>
+                </div>
+                <div class="button">
+                    <a href="" class="button-link">Xem thêm</a>
+                </div>
+                <div class="provide">
+                    <p class="new">New</p>
+                </div>
+            </article>
+            <article class="item-book" data-danhmuc="sach-tieng-viet" data-loai="Khác" data-ncc="NXB Đồng Nai">
+                <img src="./images/book-new-4.webp" alt="book-new-1" />
+                <div class="book-infor">
+                    <h4 class="book-name">Sách 4</h4>
+                    <p class="price">300,000đ</p>
+                </div>
+                <div class="button">
+                    <a href="" class="button-link">Xem thêm</a>
+                </div>
+                <div class="provide">
+                    <p class="new">New</p>
+                </div>
+            </article>
+            <article class="item-book" data-danhmuc="sach-tieng-viet" data-loai="Khác" data-ncc="NXB Dân trí">
+                <img src="./images/book-new-5.webp" alt="book-new-1" />
+                <div class="book-infor">
+                    <h4 class="book-name">Sách 5</h4>
+                    <p class="price">165,000đ</p>
+                </div>
+                <div class="button">
+                    <a href="" class="button-link">Xem thêm</a>
+                </div>
+                <div class="provide">
+                    <p class="new">New</p>
+                </div>
+            </article>
+            <article class="item-book" data-danhmuc="sach-tieng-viet" data-loai="Khác" data-ncc="Khác">
+                <img src="./images/book-new-6.webp" alt="book-new-1" />
+                <div class="book-infor">
+                    <h4 class="book-name">Sách 6</h4>
+                    <p class="price">68,000đ</p>
+                </div>
+                <div class="button">
+                    <a href="" class="button-link">Xem thêm</a>
+                </div>
+                <div class="provide">
+                    <p class="new">New</p>
+                </div>
+            </article>
+            <article class="item-book" data-danhmuc="sach-tieng-viet" data-loai="Khác" data-ncc="NXB Đồng Nai">
+                <img src="./images/dac-nhan-tam.png" alt="book-new-1" />
+                <div class="book-infor">
+                    <h4 class="book-name">Sách 7</h4>
+                    <p class="price">60,000đ</p>
+                </div>
+                <div class="button">
+                    <a href="" class="button-link">Xem thêm</a>
+                </div>
+                <div class="provide">
+                    <p class="new">New</p>
+                </div>
+            </article>
+            <article class="item-book" data-danhmuc="sach-hoc-ngoai-ngu" data-loai="Từ điển" data-ncc="Khác">
+                <img src="./images/Oxford_Dictionary.png" alt="book-new-1" />
+                <div class="book-infor">
+                    <h4 class="book-name">Sách 8</h4>
+                    <p class="price">350,000đ</p>
+                </div>
+                <div class="button">
+                    <a href="" class="button-link">Xem thêm</a>
+                </div>
+                <div class="provide">
+                    <p class="new">New</p>
+                </div>
+            </article>
+            <article class="item-book" data-danhmuc="sach-tieng-viet" data-loai="Khác" data-ncc="Khác">
+                <img src="./images/tu-duy-nhanh-va-cham.png" alt="book-new-1" />
+                <div class="book-infor">
+                    <h4 class="book-name">Sách 9</h4>
+                    <p class="price">269,000đ</p>
+                </div>
+                <div class="button">
+                    <a href="" class="button-link">Xem thêm</a>
+                </div>
+                <div class="provide">
+                    <p class="new">New</p>
+                </div>
+            </article>
+            <article class="item-book" data-danhmuc="sach-hoc-ngoai-ngu" data-loai="Khác" data-ncc="Khác">
+                <img src="./images/book-discount-1.jpg" alt="book-new-1" />
+                <div class="book-infor">
+                    <h4 class="book-name">Sách 10</h4>
+                    <p class="price">250,000đ</p>
+                </div>
+                <div class="button">
+                    <a href="" class="button-link">Xem thêm</a>
+                </div>
+                <div class="provide">
+                    <p class="new">New</p>
+                </div>
+            </article>
+            <article class="item-book" data-danhmuc="sach-tieng-anh" data-loai="Khác" data-ncc="Khác">
+                <img src="./images/book-discount-2.jpg" alt="book-new-1" />
+                <div class="book-infor">
+                    <h4 class="book-name">Sách 11</h4>
+                    <p class="price">347,000đ</p>
+                </div>
+                <div class="button">
+                    <a href="" class="button-link">Xem thêm</a>
+                </div>
+                <div class="provide">
+                    <p class="new">New</p>
+                </div>
+            </article>
+            <article class="item-book" data-danhmuc="sach-tieng-viet" data-loai="Khác" data-ncc="Khác">
+                <img src="./images/book-discount-3.jpg" alt="book-new-1" />
+                <div class="book-infor">
+                    <h4 class="book-name">Sách 12</h4>
+                    <p class="price">340,000đ</p>
+                </div>
+                <div class="button">
+                    <a href="" class="button-link">Xem thêm</a>
+                </div>
+                <div class="provide">
+                    <p class="new">New</p>
+                </div>
+            </article>
+            <article class="item-book" data-danhmuc="sach-tieng-viet" data-loai="SGK" data-ncc="NXB Giáo dục">
+                <img src="./images/book-discount-4.jpg" alt="book-new-1" />
+                <div class="book-infor">
+                    <h4 class="book-name">Sách 13</h4>
+                    <p class="price">45,000đ</p>
+                </div>
+                <div class="button">
+                    <a href="" class="button-link">Xem thêm</a>
+                </div>
+                <div class="provide">
+                    <p class="new">New</p>
+                </div>
+            </article>
+            <article class="item-book" data-danhmuc="sach-tieng-viet" data-loai="Khác" data-ncc="Khác">
+                <img src="./images/book-discount-5.webp" alt="book-new-1" />
+                <div class="book-infor">
+                    <h4 class="book-name">Sách 14</h4>
+                    <p class="price">85,000đ</p>
+                </div>
+                <div class="button">
+                    <a href="" class="button-link">Xem thêm</a>
+                </div>
+                <div class="provide">
+                    <p class="new">New</p>
+                </div>
+            </article>
+            <article class="item-book" data-danhmuc="sach-tieng-viet" data-loai="Văn học" data-ncc="NXB Văn học">
+                <img src="./images/book-discount-6.webp" alt="book-new-1" />
+                <div class="book-infor">
+                    <h4 class="book-name">Sách 15</h4>
+                    <p class="price">80,000đ</p>
+                </div>
+                <div class="button">
+                    <a href="" class="button-link">Xem thêm</a>
+                </div>
+                <div class="provide">
+                    <p class="new">New</p>
+                </div>
+            </article>
+            <article class="item-book" data-danhmuc="sach-tieng-anh" data-loai="Văn học" data-ncc="Khác">
+                <img src="./images/book-1.jpg" alt="book-new-1" />
+                <div class="book-infor">
+                    <h4 class="book-name">Sách 16</h4>
+                    <p class="price">550,000đ</p>
+                </div>
+                <div class="button">
+                    <a href="" class="button-link">Xem thêm</a>
+                </div>
+                <div class="provide">
+                    <p class="new">New</p>
+                </div>
+            </article>
+            <article class="item-book" data-danhmuc="sach-tieng-viet" data-loai="Văn học" data-ncc="NXB Văn học">
+                <img src="./images/book-2.jpg" alt="book-new-1" />
+                <div class="book-infor">
+                    <h4 class="book-name">Sách 17</h4>
+                    <p class="price">76,000đ</p>
+                </div>
+                <div class="button">
+                    <a href="" class="button-link">Xem thêm</a>
+                </div>
+                <div class="provide">
+                    <p class="new">New</p>
+                </div>
+            </article>
+            <article class="item-book" data-danhmuc="sach-tieng-viet" data-loai="Văn học" data-ncc="Khác">
+                <img src="./images/book-3.webp" alt="book-new-1" />
+                <div class="book-infor">
+                    <h4 class="book-name">Sách 18</h4>
+                    <p class="price">95,000đ</p>
+                </div>
+                <div class="button">
+                    <a href="" class="button-link">Xem thêm</a>
+                </div>
+                <div class="provide">
+                    <p class="new">New</p>
+                </div>
+            </article>
+            <article class="item-book" data-danhmuc="sach-tieng-viet" data-loai="Văn học" data-ncc="NXB Trẻ">
+                <img src="./images/book-4.jpg" alt="book-new-1" />
+                <div class="book-infor">
+                    <h4 class="book-name">Sách 19</h4>
+                    <p class="price">43,000đ</p>   
+                </div>
+                <div class="button">
+                    <a href="" class="button-link">Xem thêm</a>
+                </div>
+                <div class="provide">
+                    <p class="new">New</p>
+                </div>
+            </article>
+            <article class="item-book" data-danhmuc="sach-tieng-viet" data-loai="Văn học" data-ncc="NXB Văn học">
+                <img src="./images/book-3.jpg" alt="book-new-1" />
+                <div class="book-infor">
+                    <h4 class="book-name">Sách 20</h4>
+                    <p class="price">436,000đ</p>
+                </div>
+                <div class="button">
+                    <a href="" class="button-link">Xem thêm</a>
+                </div>
+                <div class="provide">
+                    <p class="new">New</p>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <footer class="footer" id="contacs">
+        <div class="container">
+            <aside class="address">
+            <h2 class="title">Địa chỉ</h2>
+            <figure>
+                <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2336.0986733910663!2d105.76863478138982!3d10.030553578629661!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a0895a51d60719%3A0x9d76b0035f6d53d0!2zxJDhuqFpIGjhu41jIEPhuqduIFRoxqE!5e0!3m2!1svi!2s!4v1792245297017!5m2!1svi!2s"
+                width="350"
+                height="300"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+                ></iframe>
+            </figure>
+            <div class="information">
+                <i class="fa-solid fa-location-dot"></i>
+                <p class="text">Khu II, Đ. 3 Tháng 2, Ninh Kiều, Cần Thơ, Việt Nam</p>
             </div>
-        </header>
-
-        <aside class="flex-menu">
-            <section class="menu_frame">
-                <h1 class="title">Danh mục sản phẩm</h1>
-                <nav class="nav_menu">
-                    <ul class="list">
-                        <li><a class="list-item" href="#">Sách tiếng Việt</a></li>
-                        <li><a class="list-item" href="#">Sách tiếng Anh</a></li>
-                        <li><a class="list-item" href="#">Sách học ngoại ngữ</a></li>
-                    </ul>
-                </nav>
+            </aside>
+            <section class="contacs">
+            <h2 class="title">Liên hệ</h2>
+            <ul class="list-contacs">
+                <li class="item-contacs">
+                <i class="fa-solid fa-phone"></i>
+                <p>0123456789</p>
+                </li>
+                <li class="item-contacs">
+                <i class="fa-solid fa-envelope"></i>
+                <p>admin123@gmail.com</p>
+                </li>
+            </ul>
             </section>
+        </div>
+    </footer>
 
-            <section class="menu_frame">
-                <h1 class="title">Giá</h1>
-                <fieldset class="multiple_option">
-                    <label class="checkbox_label">
-                        <input type="checkbox" name="gia"><span>0đ - 100.000đ</span>
-                    </label>
-                    <label class="checkbox_label">
-                        <input type="checkbox" name="gia"><span>100.000đ - 500.000đ</span>
-                    </label>
-                    <label class="checkbox_label">
-                        <input type="checkbox" name="gia"><span>500.000đ - Trở lên</span>
-                    </label>
-                </fieldset>
-            </section>
-
-            <section class="menu_frame">
-                <h1 class="title">Loại sản phẩm</h1>
-                <fieldset class="multiple_option">
-                    <label class="checkbox_label">
-                        <input type="checkbox" name="loai"><span>Văn học</span>
-                    </label>
-                    <label class="checkbox_label">
-                        <input type="checkbox" name="loai"><span>Truyện tranh</span>
-                    </label>
-                    <label class="checkbox_label">
-                        <input type="checkbox" name="loai"><span>Từ điển</span>
-                    </label>
-                </fieldset>
-            </section>
-
-            <section class="menu_frame">
-                <h1 class="title">Nhà cung cấp</h1>
-                <fieldset class="multiple_option">
-                    <label class="checkbox_label">
-                        <input type="checkbox" name="ncc"><span>NXB Kim Đồng</span>
-                    </label>
-                    <label class="checkbox_label">
-                        <input type="checkbox" name="ncc"><span>NXB Thanh niên</span>
-                    </label>
-                    <label class="checkbox_label">
-                        <input type="checkbox" name="ncc"><span>NXB Trẻ</span>
-                    </label>
-                </fieldset>
-            </section>
-        </aside>
-
-        <main class="flex-main">
-            <div class="main_div">
-                <article class="display__card">
-                    <a class="display__card--link" href="product-detail.html">
-                        <div>
-                            <img src="images/tieng_viet_lop1.png" alt="TiengVietLop1" class="book_img" type="image/png">
-                        </div>
-                        <h2 class="book_name">Tiếng Việt lớp 1</h2>
-                        <p class="price">Unavailable</p>
-                    </a>
-                </article>
-                <article class="display__card">
-                    <a class="display__card--link" href="product-detail.html">
-                        <div>
-                            <img src="#" alt="Ảnh bìa sách" class="book_img" type="image/png">
-                        </div>
-                        <h2 class="book_name">Tên sách</h2>
-                        <p class="price">Giá tiền</p>
-                    </a>
-                </article>
-                <article class="display__card">
-                    <a class="display__card--link" href="product-detail.html">
-                        <div>
-                            <img src="#" alt="Ảnh bìa sách" class="book_img" type="image/png">
-                        </div>
-                        <h2 class="book_name">Tên sách</h2>
-                        <p class="price">Giá tiền</p>
-                    </a>
-                </article>
-                <article class="display__card">
-                    <a class="display__card--link" href="product-detail.html">
-                        <div>
-                            <img src="#" alt="Ảnh bìa sách" class="book_img" type="image/png">
-                        </div>
-                        <h2 class="book_name">Tên sách</h2>
-                        <p class="price">Giá tiền</p>
-                    </a>
-                </article>
-                <article class="display__card">
-                    <a class="display__card--link" href="product-detail.html">
-                        <div>
-                            <img src="images/Oxford_Dictionary.png" alt="Oxford Dictionary" class="book_img" type="image/png">
-                        </div>
-                        <h2 class="book_name">Từ điển Oxford</h2>
-                        <p class="price">300,000đ</p>
-                    </a>
-                </article>
-                <article class="display__card">
-                    <a class="display__card--link" href="product-detail.html">
-                        <div>
-                            <img src="#" alt="Ảnh bìa sách" class="book_img" type="image/png">
-                        </div>
-                        <h2 class="book_name">Tên sách</h2>
-                        <p class="price">Giá tiền</p>
-                    </a>
-                </article>
-                
-                <article class="display__card">
-                    <a class="display__card--link" href="product-detail.html">
-                        <div>
-                            <img src="#" alt="Ảnh bìa sách" class="book_img" type="image/png">
-                        </div>
-                        <h2 class="book_name">Tên sách</h2>
-                        <p class="price">Giá tiền</p>
-                    </a>
-                </article>
-                <article class="display__card">
-                    <a class="display__card--link" href="product-detail.html">
-                        <div>
-                            <img src="#" alt="Ảnh bìa sách" class="book_img" type="image/png">
-                        </div>
-                        <h2 class="book_name">Tên sách</h2>
-                        <p class="price">Giá tiền</p>
-                    </a>
-                </article>
-            </div>
-        </main>
-
-        <footer class="footer">
-            <p class="footer_p">Copyright &copy; Bản quyền thuộc về Nhà sách N3, 2026.</p>
-        </footer>
-    </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 3000,
+            once: true,
+        });
+    </script>
+    <script src="./js/script.js"></script>
  </body>
  </html>
