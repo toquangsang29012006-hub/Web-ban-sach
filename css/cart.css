@@ -197,14 +197,32 @@ body {
 }
 
 @media (min-width: 768px) {
-.title {
-    font-size: 24px;
-}
   
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  
+ 
+  .title {
+    font-size: 24px;
+  }
+
+ 
+
 }
 
 @media (min-width: 1024px) {
-    .title {
- font-size: 32px;   }    
+ 
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+  }
   
+ 
+  .title {
+    font-size: 32px;
+  }
+
+
 }
