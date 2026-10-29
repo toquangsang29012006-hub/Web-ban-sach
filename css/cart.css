@@ -197,9 +197,14 @@ body {
 }
 
 @media (min-width: 768px) {
+.title {
+    font-size: 24px;
+}
   
 }
 
 @media (min-width: 1024px) {
+    .title {
+ font-size: 32px;   }    
   
 }
