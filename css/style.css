@@ -1,24 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Dancing+Script:wght@400..700&family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 body {
-    font-family: 'Be VietNam Pro', 'serif';
+  font-family: 'Be VietNam Pro', 'serif';
 }
-
-.container {
-    width: 100%;
-    margin: auto;
-}
-
 
 /* Trang chủ */
 .header {
@@ -83,6 +77,8 @@ body {
 
 .header .nav-list .active {
   background-color: green;
+  padding: 12px 18px;
+  border-radius: 20px;
 }
 
 .header .nav .nav-icon {
@@ -145,7 +141,6 @@ body {
   align-items: center;
   padding: 0px 25px;
   z-index: 1;
-  animation: chuDongDoc 3s;
 }
 
 .banner .title {
@@ -208,7 +203,6 @@ body {
   font-family: "Inria Serif", serif;
   font-weight: 800;
   color: red;
-  animation: chuDongDoc 0.3s ease;
 }
 
 .main .title::after {
@@ -224,7 +218,6 @@ body {
 .main .gioi-thieu img {
   width: 100%;
   border-radius: 50%;
-  animation: diChuyen 5s;
 }
 
 .main .gioi-thieu .content-text {
@@ -235,7 +228,6 @@ body {
   margin-top: 50px;
   margin-bottom: 22px;
   text-align: center;
-  animation: diChuyen 5s;
 }
 
 .main .gioi-thieu .title-small {
@@ -246,10 +238,6 @@ body {
 .main .gioi-thieu .desc {
   color: goldenrod;
   font-size: 12px;
-}
-
-.main .gioi-thieu .icon-contacs {
-  animation: diChuyen 5s;
 }
 
 .main .gioi-thieu .icon-start-link {
@@ -291,7 +279,6 @@ body {
   margin-bottom: 30px;
   position: relative;
   transition: 0.4s ease;
-  animation: chuDongDoc 3s;
 }
 
 .main .book .item-book:hover {
@@ -364,7 +351,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: anhDaoDong 3s infinite;
+  animation: anhDaoDong 2s infinite;
 }
 
 .main .book .provide .discount-price {
@@ -449,29 +436,6 @@ body {
 }
 
 
-
-@keyframes diChuyen {
-  0% {
-    transform: translateX(20px);
-  }
-
-  100% {
-    transform: translateX(0);
-  }
-}
-
-@keyframes chuDongDoc {
-  0% {
-    opacity: 0;
-    transform: translateY(-12px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 @keyframes anhDong {
 
   0%,
@@ -486,22 +450,276 @@ body {
 
 @keyframes anhDaoDong {
   0% {
-    transform: translateY(-5px);
+    transform: translateY(-15px);
   }
 
   50% {
-    transform: translateY(5px);
+    transform: translateY(15px);
   }
 
   100% {
-    transform: translateY(-5px);
+    transform: translateY(-15px);
   }
 }
 
 @media (min-width: 768px) {
-  
+  .header .img-logo {
+    width: 70px;
+    height: 70px;
+  }
+
+  .header .nav .nav-list {
+    flex-direction: row;
+    position: static;
+    background-color: transparent;
+    color: white;
+    width: auto;
+    height: auto;
+  }
+
+  .header .nav .icon-none {
+    display: none;
+  }
+
+  .header .nav-list .nav-item {
+    margin: 0 12px;
+  }
+
+  .header .nav-list .nav-link {
+    color: white;
+    font-size: 14px;
+    align-items: center;
+  }
+
+  .header .nav-list .nav-link:hover {
+    color: black;
+  }
+
+  .banner .title {
+    font-size: 40px;
+  }
+
+  .banner .desc {
+    font-size: 16px;
+    margin: 30px 0;
+  }
+
+  .banner .button-products {
+    width: 170px;
+    border: 3px solid yellow;
+    font-size: 14px;
+    padding: 10px 20px;
+    text-align: center;
+    transition: transform 0.5s ease;
+  }
+
+  .main .gioi-thieu img {
+    width: 320px;
+  }
+
+  .main .gioi-thieu .title-small {
+    font-size: 25px;
+    margin-bottom: 28px;
+  }
+
+  .main .gioi-thieu .desc {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .main .gioi-thieu .icon-start-link {
+    font-size: 30px;
+  }
+
+  .main .title {
+    font-size: 30px;
+  }
+
+  .main .title::after {
+    content: "";
+    width: 100px;
+    height: 5px;
+    display: block;
+  }
+
+  .main .book .item-book {
+    width: calc(100%/3 - 30px);
+    margin-bottom: 60px;
+  }
+
+  .main .book .book-name {
+    font-size: 20px;
+    margin-bottom: 18px;
+  }
+
+  .main .book .price {
+    font-size: 15px;
+  }
+
+  .main .book .button-link {
+    padding: 10px 14px;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    color: blue;
+    transition: 0.3s ease-in;
+  }
+
+  .main .book .provide {
+    width: 100px;
+    height: 100px;
+  }
+
+  .main .book .provide .new {
+    font-size: 17px;
+  }
+
+
+  .main .book .provide .discount-price {
+    font-size: 12px;
+  }
+
+  .main .book .provide span {
+    font-size: 16px;
+    font-weight: 800;
+    color: yellow;
+  }
+
+  .footer {
+    padding: 30px;
+
+  }
+
+  .footer .title {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    color: goldenrod;
+    margin-bottom: 20px;
+  }
+
+  .footer .address .map {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .footer .address iframe {
+    display: block;
+    width: 200px;
+    height: auto;
+  }
+
+  .footer .address .information .text {
+    font-size: 18px;
+  }
+
+  .footer .contacs .list-contacs {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .footer .contacs .item-contacs {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .footer .contacs .item-contacs p {
+    font-size: 18px;
+  }
+
+
 }
 
 @media (min-width: 1024px) {
-  
+  .header .nav {
+    padding: 18px 30px;
+  }
+
+  .header .nav-icon .nav-item {
+    margin-right: 20px;
+  }
+
+  .header .nav-icon .nav-link {
+    display: flex;
+    align-items: center;
+  }
+
+  .header .nav-icon span {
+    display: block;
+    font-size: 12px;
+    margin-left: 12px;
+  }
+
+  .main {
+    padding: 0 30px;
+  }
+
+  .main .gioi-thieu .content {
+    flex-direction: row;
+    width: 100%;
+    padding: 12px 20px;
+  }
+
+  .main .gioi-thieu img {
+    width: 500px;
+  }
+
+  .main .gioi-thieu .content-text {
+    max-width: 50%;
+  }
+
+  .main .book .item-book {
+    width: calc(100%/3 - 40px);
+  }
+
+  .main .book .provide {
+    width: 130px;
+    height: 130px;
+  }
+
+  .main .book .provide .new {
+    font-size: 20px;
+  }
+
+
+  .main .book .provide .discount-price {
+    font-size: 15px;
+  }
+
+  .main .book .provide span {
+    font-size: 18px;
+  }
+
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 40px 30px;
+  }
+
+  .footer .address .map {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .footer .address iframe {
+    width: 250px;
+    height: 150px;
+    margin-bottom: 20px;
+  }
+
+  .footer .contacs .list-contacs {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+
+
+
+
 }
