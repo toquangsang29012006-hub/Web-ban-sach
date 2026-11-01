@@ -248,9 +248,166 @@ body {
 }
 
 @media (min-width: 768px) {
-  
+  .container {
+        max-width: 720px;
+        margin: auto;
+    }
+
+    .header .nav {
+        padding: 15px 30px;
+    }
+
+    .header .icon-start {
+        display: none;
+    }
+
+    .header .nav .nav-list {
+        position: static;
+        flex-direction: row;
+        width: auto;
+        height: auto;
+        background-color: transparent;
+    }
+
+    .header .nav-list .icon-end {
+        display: none;
+    }
+
+    .header .nav-list .nav-item {
+        margin-top: 0;
+    }
+
+    .header .nav-list .nav-link {
+        font-size: 15px;
+        color: white;
+        padding: 10px;
+    }
+
+    .header .nav-icon .nav-link {
+        font-size: 18px;
+    }
+
+    .header .nav-icon span {
+        display: inline;
+        font-size: 14px;
+    }
+
+    .main .title {
+        margin-bottom: 70px;
+    }
+
+    .main .account-card {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 20px;
+        padding: 40px 25px 20px;
+    }
+
+    .main .account-card .avatar {
+        width: 80px;
+        height: 80px;
+    }
+
+    .main .account-card .account-infor {
+        flex: 1;
+    }
+
+    .main .account-card .account {
+        margin-bottom: 25px;
+    }
+
+    .main .account-card .address-user {
+        width: 100%;
+    }
+
+    .footer .address iframe {
+        display: block;
+        width: 300px;
+        height: 200px;
+    }
+
+    .footer .contacs .list-contacs {
+        justify-content: flex-start;
+        gap: 30px;
+    }
 }
 
 @media (min-width: 1024px) {
-  
+  .container {
+        max-width: 1140px;
+        margin: auto;
+    }
+
+    .header .nav {
+        padding: 15px 50px;
+    }
+
+    .header .nav-list .nav-link {
+        font-size: 17px;
+        padding: 10px 15px;
+    }
+
+    .header .nav-icon .nav-link {
+        font-size: 20px;
+    }
+
+    .main {
+        margin: 140px 0;
+    }
+
+    .main .title {
+        margin-bottom: 80px;
+    }
+
+    .main .account-card {
+        flex-wrap: nowrap;
+        gap: 35px;
+        padding: 50px 35px;
+    }
+
+    .main .account-card .avatar {
+        width: 100px;
+        height: 100px;
+        position: static;
+        flex-shrink: 0;
+    }
+
+    .main .account-card .account-infor {
+        flex: 1;
+    }
+
+    .main .account-card .account {
+        margin-bottom: 30px;
+    }
+
+    .main .account-card .address-user {
+        width: auto;
+        min-width: 250px;
+        margin-bottom: 0;
+    }
+
+    .footer {
+        padding: 40px 50px;
+    }
+
+    .footer .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 50px;
+    }
+
+    .footer .address {
+        flex: 1;
+    }
+
+    .footer .address iframe {
+        width: 400px;
+        height: 250px;
+    }
+
+    .footer .contacs {
+        flex: 1;
+    }
 }
