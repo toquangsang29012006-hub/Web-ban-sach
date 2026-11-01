@@ -19,30 +19,30 @@
     <header class="header">
       <div class="container">
         <nav class="nav">
-          <i class="fa-solid fa-bars icon-start" id="nav-open"></i>
+          <i class="fa-solid fa-bars icon-none icon-start" id="nav-open"></i>
           <img src="./images/Logo.jpg" alt="Logo" class="img-logo" />
           <ul class="nav-list" id="show-menu">
-            <i class="fa-solid fa-x icon-end" id="nav-close"></i>
-            <li class="nav-item">
-              <a href="" class="nav-link active">Trang chủ</a>
-            </li>
-            <li class="nav-item">
-              <a href="" class="nav-link">Danh mục sách</a>
-            </li>
-            <li class="nav-item">
-              <a href="#about" class="nav-link">Giới thiệu</a>
-            </li>
-            <li class="nav-item">
-              <a href="#contacs" class="nav-link">Liên hệ</a>
-            </li>
-          </ul>
-          <ul class="nav-icon">
-            <li class="nav-item">
-              <a href="" class="nav-link"> <i class="fa-solid fa-cart-shopping"></i> <span>Giỏ hàng</span> </a>
-            </li>
-            <li class="nav-item">
-              <a href="" class="nav-link"> <i class="fa-solid fa-circle-user"></i> <span> Đăng nhập</span> </a>
-            </li>
+          <i class="fa-solid fa-x icon-none icon-end" id="nav-close"></i>
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Trang chủ</a>
+          </li>
+          <li class="nav-item">
+            <a href="product-categories.html" class="nav-link">Danh mục sách</a>
+          </li>
+          <li class="nav-item">
+            <a href="index.html#about" class="nav-link">Giới thiệu</a>
+          </li>
+          <li class="nav-item">
+            <a href="index.html#contacs" class="nav-link">Liên hệ</a>
+          </li>
+        </ul>
+        <ul class="nav-icon">
+          <li class="nav-item">
+            <a href="cart.html" class="nav-link"> <i class="fa-solid fa-cart-shopping"></i> <span>Giỏ hàng</span> </a>
+          </li>
+          <li class="nav-item">
+            <a href="login.html" class="nav-link"> <i class="fa-solid fa-circle-user"></i> <span> Đăng nhập</span> </a>
+          </li>
           </ul>
         </nav>
       </div>
@@ -51,17 +51,143 @@
     <main class="main">
       <div class="container">
         <h1 class="title">Danh mục sản phẩm</h1>
-        <select name="" id="" class="option">
-          <option value="">Giá tăng dần</option>
-          <option value="">Giá giảm dần</option>
-          <option value="">Từ A->Z</option>
-          <option value="">Từ Z->A</option>
-        </select>
+        <section class="category">
+          <div class="category-col">
+            <h2 class="category-title"><i class="fa-solid fa-book"></i> Danh mục sách</h2>
+            <ul class="list-category">
+              <li><a href="" class="category-link">Sách mới</a></li>
+              <li><a href="" class="category-link">Sách bán chạy</a></li>
+              <li><a href="" class="category-link">Sách giảm giá</a></li>
+              <li><a href="" class="category-link">Sách tiếng Việt</a></li>
+              <li><a href="" class="category-link">Sách tiếng Anh</a></li>
+            </ul>
+          </div>
+          <div class="category-col">
+            <h2 class="category-title"><i class="fa-solid fa-list"></i> Loại sản phẩm</h2>
+            <ul class="list-category">
+              <li><a href="" class="category-link">Văn học</a></li>
+              <li><a href="" class="category-link">SGK</a></li>
+              <li><a href="" class="category-link">Truyện tranh</a></li>
+              <li><a href="" class="category-link">Từ điển</a></li>
+            </ul>
+          </div>
+          <div class="category-col">
+            <h2 class="category-title"><i class="fa-solid fa-book-open"></i> Nhà cung cấp</h2>
+            <ul class="list-category">
+              <li><a href="" class="category-link">NXB Trẻ</a></li>
+              <li><a href="" class="category-link">NXB Văn Học</a></li>
+              <li><a href="" class="category-link">NXB Dân trí</a></li>
+              <li><a href="" class="category-link">NXB Đồng Nai</a></li>
+              <li><a href="" class="category-link">NXB Giáo Dục</a></li>
+            </ul>
+          </div>
+        </section>
+        
+        <section class="option">
+          <!-- <label for="book-filter" class="filter-label">Sắp xếp theo:</label> -->
+          <select name="book-filter" id="book-filter" class="book-filter">
+            <option value="">Giá tăng dần</option>
+            <option value="">Giá giảm dần</option>
+            <option value="">Từ A->Z</option>
+            <option value="">Từ Z->A</option>
+          </select>
+        </section>
         <hr />
         <div class="list-book">
           <article class="item-book">
-            <img src="./images/book-new-1.webp" alt="book-new-1" />
-
+            <a href="">
+              <img src="./images/Oxford_Dictionary.png" alt="book-new-1" />
+            </a>
+            <div class="book-infor">
+              <h4 class="book-name">Sách 1</h4>
+              <p class="price">350,000đ</p>
+            </div>
+          </article>
+          <article class="item-book">
+            <a href="">
+              <img src="./images/book-3.jpg" alt="book-new-1" />
+            </a>
+            <div class="book-infor">
+              <h4 class="book-name">Sách 2</h4>
+              <p class="price">436,000đ</p>
+            </div>
+          </article>
+          <article class="item-book">
+            <a href="">
+              <img src="./images/book-4.jpg" alt="book-new-1" />
+            </a>
+            <div class="book-infor">
+              <h4 class="book-name">Sách 3</h4>
+              <p class="price">43,000đ</p>   
+              </div>
+          </article>
+          <article class="item-book">
+            <a href="">
+              <img src="./images/book-3.webp" alt="book-new-1" />
+            </a>
+            <div class="book-infor">
+                <h4 class="book-name">Sách 4</h4>
+                <p class="price">95,000đ</p>
+              </div>
+          </article>
+          <article class="item-book">
+            <a href="">
+              <img src="./images/book-2.jpg" alt="book-new-1" />
+            </a>
+            <div class="book-infor">
+              <h4 class="book-name">Sách 5</h4>
+              <p class="price">76,000đ</p>
+            </div>
+          </article>
+          <article class="item-book">
+            <a href="">
+              <img src="./images/book-1.jpg" alt="book-new-1" />
+            </a>
+            <div class="book-infor">
+              <h4 class="book-name">Sách 6</h4>
+              <p class="price">550,000đ</p>
+            </div>
+          </article>
+          <article class="item-book">
+            <a href="">
+              <img src="./images/book-5.jpg" alt="book-new-1" />
+            </a>
+            <div class="book-infor">
+              <h4 class="book-name">Sách 7</h4>
+              <p class="price">80,000đ</p>
+            </div>
+          </article>
+          <article class="item-book">
+            <a href="">
+              <img src="./images/book-6.jpg" alt="book-new-1" />
+            </a>
+            <div class="book-infor">
+              <h4 class="book-name">Sách 8</h4>
+              <p class="price">85,000đ</p>
+            </div>
+          </article>
+          <article class="item-book">
+            <a href="">
+              <img src="./images/book-new-1.webp" alt="book-new-1" />
+            </a>
+            <div class="book-infor">
+              <h4 class="book-name">Sách 1</h4>
+              <p class="price">100,000đ</p>
+            </div>
+          </article>
+          <article class="item-book">
+            <a href="">
+              <img src="./images/book-new-1.webp" alt="book-new-1" />
+            </a>
+            <div class="book-infor">
+              <h4 class="book-name">Sách 1</h4>
+              <p class="price">100,000đ</p>
+            </div>
+          </article>
+          <article class="item-book">
+            <a href="">
+              <img src="./images/book-new-1.webp" alt="book-new-1" />
+            </a>
             <div class="book-infor">
               <h4 class="book-name">Sách 1</h4>
               <p class="price">100,000đ</p>
@@ -115,6 +241,7 @@
         </div>
       </div>
     </main>
+    
     <footer class="footer" id="contacs">
       <aside class="address">
         <h2 class="title">Địa chỉ</h2>
@@ -148,5 +275,14 @@
         </ul>
       </section>
     </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 3000,
+        once: true,
+      });
+    </script>
+    <script src="./js/script.js"></script>
   </body>
 </html>
