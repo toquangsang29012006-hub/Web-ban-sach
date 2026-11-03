@@ -1,28 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Dancing+Script:wght@400..700&family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 body {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    font-family: 'Be VietNam Pro', 'serif';
-    background-color: #f8fafc;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: 'Be VietNam Pro', 'serif';
+  background-color: #f8fafc;
 }
 
 .container {
-    width: 100%;
-    margin: 0 auto;
-    padding: 0px 12px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0px 12px;
 }
 
 .header {
@@ -112,116 +112,201 @@ body {
 }
 
 .main .show {
-    display: block;
-    text-align: center;
+  display: block;
+  text-align: center;
 }
 
-.main .d-none{
-    display: none;
+.main .d-none {
+  display: none;
 }
 
 .main .item-product {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-    border: 1px solid black;
-    border-radius: 12px;
-    margin-bottom: 12px;
-    background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border: 1px solid black;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  background-color: #fff;
 }
 
 .main .item-product .img-product {
-    width: 90px;
-    margin-right: 5px;
+  width: 90px;
 }
 
 .main .item-product .book-name {
-    font-size: 18px;
-    color: orange;
-    font-weight: 600;
-    margin-bottom: 10px;
+  font-size: 18px;
+  color: orange;
+  font-weight: 600;
+  margin-bottom: 10px;
 }
 
 .main .item-product .book-price {
-    color: red;
-    font-weight: 600;
-    font-size: 12px;
-} 
+  color: red;
+  font-weight: 600;
+  font-size: 12px;
+}
 
 .main .item-product .btn-delete {
-    background-color: red;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 12px;
-    font-weight: 600;
-    color: white;
-    transition: 0.5s ease;
+  background-color: red;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-weight: 600;
+  color: white;
+  transition: 0.5s ease;
 }
 
 .main .item-product .btn-delete:hover {
-    border: 2px solid black;
+  border: 2px solid black;
 }
 
 .footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: black;
-    color: white;
-    padding: 10px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  color: white;
+  padding: 10px 16px;
 }
 
 .footer .checked-all {
-    display: flex;
-    align-items: center;
-    gap: 12px
+  display: flex;
+  align-items: center;
+  gap: 12px
 }
 
 .footer .btn-buy {
-    background: red;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-weight: bold;
-    font-size: 13px;
-    border-radius: 4px;
+  background: red;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  font-size: 13px;
+  border-radius: 4px;
 }
 
 .footer .sum-buy {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    font-size: 14px;
-    font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 @media (min-width: 768px) {
-  
+
   .container {
     max-width: 720px;
     margin: 0 auto;
   }
-  
- 
-  .title {
-    font-size: 24px;
+
+  .header .img-logo {
+    width: 70px;
+    height: 70px;
   }
+
+  .header .nav .nav-list {
+    flex-direction: row;
+    position: static;
+    background-color: transparent;
+    color: white;
+    width: auto;
+    height: auto;
+  }
+
+  .header .nav .icon-none {
+    display: none;
+  }
+
+  .header .nav-list .nav-item {
+    margin: 0 12px;
+  }
+
+  .header .nav-list .nav-link {
+    color: white;
+    font-size: 14px;
+    align-items: center;
+  }
+
+  .header .nav-list .nav-link:hover {
+    color: black;
+  }
+
+  .main .item-product input {
+    width: 18px;
+    height: 18px;
+  }
+
+  .main .item-product .img-product {
+    width: 100px;
+  }
+
+  .main .item-product .book-name {
+    font-size: 20px;
+  }
+
+  .main .item-product .book-price {
+    font-size: 18px;
+  }
+
+  .footer {
+    padding: 40px 30px;
+  }
+
+  .footer input {
+    width: 18px;
+    height: 18px;
+  }
+
+  .footer .sum-buy p {
+    font-size: 20px;
+  }
+
+
+
 }
- 
+
 
 
 
 @media (min-width: 1024px) {
- 
+
   .container {
     max-width: 960px;
     margin: 0 auto;
   }
-  
- 
-  .title {
-    font-size: 32px;
+
+  .header .nav {
+    padding: 18px 30px;
+  }
+
+  .header .nav-icon .nav-item {
+    margin-right: 20px;
+  }
+
+  .header .nav-list .nav-link {
+    font-size: 18px;
+  }
+
+  .header .nav-icon .nav-link {
+    display: flex;
+    align-items: center;
+  }
+
+  .header .nav-icon span {
+    display: block;
+    font-size: 17px;
+    margin-left: 12px;
+  }
+
+  .footer .sum-buy {
+    gap: 30px;
+  }
+
+  .footer .btn-buy {
+    font-size: 16px;
   }
 
 

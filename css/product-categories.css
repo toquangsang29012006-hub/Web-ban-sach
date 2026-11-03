@@ -1,23 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Dancing+Script:wght@400..700&family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 body {
-    font-family: 'Be VietNam Pro', 'serif';
+  font-family: 'Be VietNam Pro', 'serif';
 }
 
 .container {
-    width: 100%;
-    margin: auto;
-    padding: 0 20px;
+  width: 100%;
+  padding: 0 30px;
 }
 
 
@@ -110,12 +109,9 @@ body {
   margin-top: 120px;
 }
 
-.main .title{
+.main .title {
   margin-bottom: 30px;
-} 
-
-.main h1 {
-  font-size: 25px;
+  font-size: 45px;
 }
 
 .main .category {
@@ -126,7 +122,7 @@ body {
   border: 2px solid #ccc;
   border-radius: 12px;
   background-color: #fff;
-  margin-bottom: 16px; 
+  margin-bottom: 16px;
 }
 
 .main .category-col {
@@ -194,14 +190,13 @@ body {
 
 .main .list-book img {
   width: 100%;
-  padding: 12px;
   background-color: #fff;
   height: auto;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 1/1;
   object-fit: contain;
 }
 
-.main  .item-book {
+.main .item-book {
   width: calc(100%/2 - 30px);
   background-color: #fff;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -216,7 +211,7 @@ body {
   transform: scale(1.1);
 }
 
-.main  img {
+.main img {
   display: block;
   width: 100%;
   height: 100%;
@@ -306,7 +301,7 @@ body {
 }
 
 @media (min-width: 768px) {
-    .header .img-logo {
+  .header .img-logo {
     width: 70px;
     height: 70px;
   }
@@ -342,7 +337,7 @@ body {
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
   }
- 
+
   .main .category-col {
     border-top: 0;
     padding-top: 0;
@@ -356,18 +351,64 @@ body {
   }
 
   .main .book-filter {
-    width: 90px;
     padding: 12px 16px;
     border-radius: 12px;
     margin-bottom: 7px;
   }
 
-  .main .list-book img {
-    height: 490px;
-    object-fit: cover;
-    padding: 0;
+  .main .item-book {
+    width: calc(100%/3 - 30px);
   }
+
+  .footer {
+    padding: 30px;
+
+  }
+
+  .footer .title {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    color: goldenrod;
+    margin-bottom: 20px;
+  }
+
+  .footer .address .map {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .footer .address iframe {
+    display: block;
+    width: 200px;
+    height: auto;
+  }
+
+  .footer .address .information .text {
+    font-size: 18px;
+  }
+
+  .footer .contacs .list-contacs {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .footer .contacs .item-contacs {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .footer .contacs .item-contacs p {
+    font-size: 18px;
+  }
+
 }
+
+
 
 @media (min-width: 1024px) {
   .header .nav {
@@ -378,6 +419,10 @@ body {
     margin-right: 20px;
   }
 
+  .header .nav-list .nav-link {
+    font-size: 18px;
+  }
+
   .header .nav-icon .nav-link {
     display: flex;
     align-items: center;
@@ -385,7 +430,7 @@ body {
 
   .header .nav-icon span {
     display: block;
-    font-size: 12px;
+    font-size: 18px;
     margin-left: 12px;
   }
 
@@ -393,23 +438,41 @@ body {
     margin-top: 150px;
   }
 
-  .main .title{
+  .main .title {
     margin-bottom: 35px;
-  } 
-
-  .main h1 {
     font-size: 35px;
   }
 
   .main .book-filter {
-    width: 220px;
     padding: 14px 18px;
     font-size: 16px;
   }
 
   .main .item-book {
-    flex: 0 0 calc(100%/4 - 30px);
+    width: calc(100%/4 - 40px);
+  }
+
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 40px 60px;
+  }
+
+  .footer .address .map {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .footer .address iframe {
+    width: 250px;
+    height: 150px;
+    margin-bottom: 20px;
+  }
+
+  .footer .contacs .list-contacs {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
-
-

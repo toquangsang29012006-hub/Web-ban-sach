@@ -15,100 +15,94 @@ body {
     background-color: #f8fafc;
 }
 
-.container {
-    width: 100%;
-    margin: auto;
-    padding: 0px 12px;
-}
-
-
 .header {
-  position: relative;
+    position: relative;
 }
 
 .header .img-logo {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
 }
 
 .header .nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  z-index: 999;
-  background-color: black;
-  width: 100%;
-  padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 999;
+    background-color: black;
+    width: 100%;
+    padding: 15px 25px;
 
 }
 
 .header .nav .nav-list {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  list-style: none;
-  position: fixed;
-  top: 0px;
-  left: -300px;
-  width: 300px;
-  height: 100%;
-  background-color: #fff;
-  transition: 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    position: fixed;
+    top: 0px;
+    left: -300px;
+    width: 300px;
+    height: 100%;
+    background-color: #fff;
+    transition: 0.3s ease;
 }
 
 .header .nav .show {
-  left: 0px;
+    left: 0px;
 }
 
 .header .nav-list .nav-item {
-  margin-top: 50px;
+    margin-top: 50px;
 }
 
 .header .nav-list .nav-link {
-  font-size: 20px;
-  color: black;
-  font-weight: 600;
-  padding: 10px 20px;
-  border-radius: 20px;
-  transition: 0.3s ease-in;
+    font-size: 20px;
+    color: black;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: 0.3s ease-in;
 }
 
 .header .nav-list .nav-link:hover {
-  background-color: yellow;
+    background-color: yellow;
 }
 
 .header .nav-list .active {
-  background-color: green;
+    background-color: green;
 }
 
 .header .nav .nav-icon {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .header .nav-icon .nav-link {
-  margin-right: 12px;
-  font-size: 24px;
-  color: #fff;
+    margin-right: 12px;
+    font-size: 24px;
+    color: #fff;
 }
 
 .header .nav-icon span {
-  display: none;
+    display: none;
 }
 
 .header .icon-start {
-  color: #fff;
-  font-size: 22px;
+    color: #fff;
+    font-size: 22px;
 }
 
 
 .main {
     margin: 120px 0;
+    padding: 0px 30px;
 }
 
 .main .title {
@@ -186,110 +180,98 @@ body {
 
 
 .footer {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-  background-color: black;
-  color: #fff;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: black;
+    color: #fff;
 }
 
 .footer .title {
-  display: flex;
-  align-items: center;
-  font-size: 19px;
-  color: goldenrod;
-  margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    font-size: 19px;
+    color: goldenrod;
+    margin-bottom: 20px;
 }
 
 .footer .title::before {
-  content: "";
-  display: inline-block;
-  width: 5px;
-  height: 30px;
-  background-color: yellow;
-  margin-right: 12px;
-  border-radius: 18px;
+    content: "";
+    display: inline-block;
+    width: 5px;
+    height: 30px;
+    background-color: yellow;
+    margin-right: 12px;
+    border-radius: 18px;
 }
 
 .footer .address {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .footer .address iframe {
-  display: none;
+    display: none;
 }
 
 .footer .address .information {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .footer .address .information .text {
-  font-size: 13px;
-  margin-left: 10px;
+    font-size: 13px;
+    margin-left: 10px;
 }
 
 .footer .contacs .list-contacs {
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .footer .contacs .item-contacs {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
 .footer .contacs .item-contacs p {
-  font-size: 13px;
+    font-size: 13px;
 }
 
 @media (min-width: 768px) {
-  .container {
-        max-width: 720px;
-        margin: auto;
-    }
-
-    .header .nav {
-        padding: 15px 30px;
-    }
-
-    .header .icon-start {
-        display: none;
+    .header .img-logo {
+        width: 70px;
+        height: 70px;
     }
 
     .header .nav .nav-list {
-        position: static;
         flex-direction: row;
+        position: static;
+        background-color: transparent;
+        color: white;
         width: auto;
         height: auto;
-        background-color: transparent;
     }
 
-    .header .nav-list .icon-end {
+    .header .nav .icon-none {
         display: none;
     }
 
     .header .nav-list .nav-item {
-        margin-top: 0;
+        margin: 0 12px;
     }
 
     .header .nav-list .nav-link {
-        font-size: 15px;
         color: white;
-        padding: 10px;
-    }
-
-    .header .nav-icon .nav-link {
-        font-size: 18px;
-    }
-
-    .header .nav-icon span {
-        display: inline;
         font-size: 14px;
+        align-items: center;
+    }
+
+    .header .nav-list .nav-link:hover {
+        color: black;
     }
 
     .main .title {
@@ -297,11 +279,15 @@ body {
     }
 
     .main .account-card {
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: center;
-        gap: 20px;
-        padding: 40px 25px 20px;
+        padding-top: 70px;
+    }
+
+    .main .account .key {
+        font-size: 20px;
+    }
+
+    .main .account .value {
+        font-size: 18px;
     }
 
     .main .account-card .avatar {
@@ -309,55 +295,86 @@ body {
         height: 80px;
     }
 
-    .main .account-card .account-infor {
-        flex: 1;
-    }
-
-    .main .account-card .account {
-        margin-bottom: 25px;
-    }
-
     .main .account-card .address-user {
-        width: 100%;
+        max-width: 500px;
+    }
+
+    .main .account-card .address-user .address {
+        font-size: 16px;
+    }
+
+    .footer {
+        padding: 30px;
+    }
+
+    .footer .title {
+        display: flex;
+        align-items: center;
+        font-size: 24px;
+        color: goldenrod;
+        margin-bottom: 20px;
+    }
+
+    .footer .address .map {
+        display: flex;
+        align-items: center;
+        gap: 20px;
     }
 
     .footer .address iframe {
         display: block;
-        width: 300px;
-        height: 200px;
+        width: 200px;
+        height: auto;
+    }
+
+    .footer .address .information .text {
+        font-size: 18px;
     }
 
     .footer .contacs .list-contacs {
+        display: flex;
         justify-content: flex-start;
-        gap: 30px;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .footer .contacs .item-contacs {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .footer .contacs .item-contacs p {
+        font-size: 18px;
     }
 }
 
 @media (min-width: 1024px) {
-  .container {
-        max-width: 1140px;
-        margin: auto;
-    }
-
     .header .nav {
-        padding: 15px 50px;
+        padding: 18px 30px;
     }
 
     .header .nav-list .nav-link {
-        font-size: 17px;
-        padding: 10px 15px;
+        font-size: 18px;
+    }
+
+    .header .nav-icon .nav-item {
+        margin-right: 20px;
     }
 
     .header .nav-icon .nav-link {
-        font-size: 20px;
+        display: flex;
+        align-items: center;
     }
 
-    .main {
-        margin: 140px 0;
+    .header .nav-icon span {
+        display: block;
+        font-size: 17px;
+        margin-left: 12px;
     }
 
     .main .title {
-        margin-bottom: 80px;
+        font-size: 40px;
     }
 
     .main .account-card {
@@ -366,19 +383,18 @@ body {
         padding: 50px 35px;
     }
 
+    .main .account .key {
+        font-size: 30px;
+    }
+
+    .main .account .value {
+        font-size: 26px;
+    }
+
     .main .account-card .avatar {
         width: 100px;
         height: 100px;
         position: static;
-        flex-shrink: 0;
-    }
-
-    .main .account-card .account-infor {
-        flex: 1;
-    }
-
-    .main .account-card .account {
-        margin-bottom: 30px;
     }
 
     .main .account-card .address-user {
@@ -387,27 +403,28 @@ body {
         margin-bottom: 0;
     }
 
+
     .footer {
-        padding: 40px 50px;
-    }
-
-    .footer .container {
-        display: flex;
+        flex-direction: row;
         justify-content: space-between;
-        align-items: flex-start;
-        gap: 50px;
+        padding: 40px 30px;
     }
 
-    .footer .address {
-        flex: 1;
+    .footer .address .map {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
     }
 
     .footer .address iframe {
-        width: 400px;
-        height: 250px;
+        width: 250px;
+        height: 150px;
+        margin-bottom: 20px;
     }
 
-    .footer .contacs {
-        flex: 1;
+    .footer .contacs .list-contacs {
+        flex-direction: column;
+        align-items: flex-start;
     }
 }

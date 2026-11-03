@@ -1,30 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Dancing+Script:wght@400..700&family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 body {
-    font-family: 'Be VietNam Pro', 'serif';
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: 'Be VietNam Pro', 'serif';
+  min-height: 100vh;
 }
 
 .container {
-    width: 100%;
-    margin: auto;
-    padding: 0 12px;
+  width: 100%;
+  margin: auto;
+  padding: 0 12px;
 }
 
 
 /* Trang chủ */
 .header {
   position: relative;
-  height: 100px;
 }
 
 .header .img-logo {
@@ -108,87 +111,89 @@ body {
 }
 
 .main {
-    margin: 30px 0;
+  padding: 120px 40px 20px 40px;
+  background-color: #f8f9fa;
+  min-height: calc(100vh - 200px);
 }
 
 .main .item-book {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
 }
 
 .main img {
-    width: 350px;
+  width: 350px;
 }
 
 .main hr {
-    color: goldenrod;
-    margin-bottom: 12px;
+  color: goldenrod;
+  margin-bottom: 12px;
 }
 
 .main .book-name {
-    font-size: 22px;
-    color: gray;
+  font-size: 22px;
+  color: gray;
 }
 
 .main .price {
-    font-size: 22px;
-    font-weight: bold;
+  font-size: 22px;
+  font-weight: bold;
 }
 
 .main .price span {
-    color: orange;
+  color: orange;
 }
 
 .main .quanlity label {
-    font-size: 22px;
-    font-weight: bold;
-    margin-right: 12px;
+  font-size: 22px;
+  font-weight: bold;
+  margin-right: 12px;
 }
 
 .main .quanlity .quantity-book {
-    width: 50px;
-    height: 40px;
-    padding: 5px;
-    border-radius: 10px;
+  width: 50px;
+  height: 40px;
+  padding: 5px;
+  border-radius: 10px;
 }
 
 .main .buttons {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
 }
 
 .main .buttons .btn-add-cart {
-    color: #F97316;
-    background-color: transparent;
-    padding: 8px 12px;
-    border-radius: 12px;
-    border: 3px solid #F97316;
-    font-size: 13px;
-    font-weight: bold;
-    transition: 0.5s ease-in;
+  color: #F97316;
+  background-color: transparent;
+  padding: 8px 12px;
+  border-radius: 12px;
+  border: 3px solid #F97316;
+  font-size: 13px;
+  font-weight: bold;
+  transition: 0.5s ease-in;
 }
 
 .main .buttons .btn-add-cart:hover {
-    color: #fff;
-    background-color: #F97316;
+  color: #fff;
+  background-color: #F97316;
 }
 
 .main .buttons .btn-buy-now {
-    color: #fff;
-    background-color: #F97316;
-    padding: 8px 12px;
-    border-radius: 12px;
-    border: 3px solid #F97316;
-    font-size: 13px;
-    font-weight: bold;
-    transition: 0.5s ease-in;
+  color: #fff;
+  background-color: #F97316;
+  padding: 8px 12px;
+  border-radius: 12px;
+  border: 3px solid #F97316;
+  font-size: 13px;
+  font-weight: bold;
+  transition: 0.5s ease-in;
 }
 
 .main .buttons .btn-buy-now:hover {
-    color: #F97316;
-    background-color: #fff;
+  color: #F97316;
+  background-color: #fff;
 }
 
 .footer {
@@ -256,58 +261,148 @@ body {
 @media (min-width: 768px) {
   .container {
     max-width: 720px;
+    margin: 0 auto;
   }
 
-  .main .item-book {
+  .header .img-logo {
+    width: 70px;
+    height: 70px;
+  }
+
+  .header .nav .nav-list {
     flex-direction: row;
+    position: static;
+    background-color: transparent;
+    color: white;
+    width: auto;
+    height: auto;
+  }
+
+  .header .nav .icon-none {
+    display: none;
+  }
+
+  .header .nav-list .nav-item {
+    margin: 0 12px;
+  }
+
+  .header .nav-list .nav-link {
+    color: white;
+    font-size: 14px;
     align-items: center;
-    justify-content: center;
+  }
+
+  .header .nav-list .nav-link:hover {
+    color: black;
+  }
+
+  .main .book-name {
+    font-size: 28px;
+  }
+
+  .footer {
+    padding: 30px;
+
+  }
+
+  .footer .title {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    color: goldenrod;
+    margin-bottom: 20px;
+  }
+
+  .footer .address .map {
+    display: flex;
+    align-items: center;
+    gap: 20px;
   }
 
   .footer .address iframe {
     display: block;
-    width: 100%;
-    height: 180px;
-    margin-top: 10px;
-    border: none;
-    border-radius: 8px;
+    width: 200px;
+    height: auto;
+  }
+
+  .footer .address .information .text {
+    font-size: 18px;
+  }
+
+  .footer .contacs .list-contacs {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .footer .contacs .item-contacs {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .footer .contacs .item-contacs p {
+    font-size: 18px;
   }
 }
 
 @media (min-width: 1024px) {
   .container {
-    max-width: 1000px;
+    max-width: 960px;
+    margin: 0 auto;
   }
 
-  .header .icon-start {
-    display: none;
+  .header .nav {
+    padding: 18px 30px;
   }
 
-  .header .nav .nav-list {
-    position: static;
-    flex-direction: row;
-    width: auto;
-    height: auto;
-    background-color: transparent;
-  }
-
-  .header .nav-list .nav-item {
-    margin-top: 0;
-    margin-left: 20px;
+  .header .nav-icon .nav-item {
+    margin-right: 20px;
   }
 
   .header .nav-list .nav-link {
-    color: #fff;
-    font-size: 16px;
+    font-size: 18px;
+  }
+
+  .header .nav-icon .nav-link {
+    display: flex;
+    align-items: center;
+  }
+
+  .header .nav-icon span {
+    display: block;
+    font-size: 17px;
+    margin-left: 12px;
+  }
+
+  .main {
+    display: flex;
+    align-items: center;
+    padding: 150px 60px 30px 60px;
   }
 
   .footer {
     flex-direction: row;
     justify-content: space-between;
+    padding: 40px 60px;
   }
 
-  .footer .address,
-  .footer .contacs {
-    width: 48%;
+  .footer .address .map {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .footer .address iframe {
+    width: 250px;
+    height: 150px;
+    margin-bottom: 20px;
+  }
+
+  .footer .contacs .list-contacs {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }

@@ -643,6 +643,10 @@ body {
     margin-right: 20px;
   }
 
+  .header .nav-list .nav-link {
+    font-size: 18px;
+  }
+
   .header .nav-icon .nav-link {
     display: flex;
     align-items: center;
@@ -650,7 +654,7 @@ body {
 
   .header .nav-icon span {
     display: block;
-    font-size: 12px;
+    font-size: 17px;
     margin-left: 12px;
   }
 
@@ -697,7 +701,7 @@ body {
   .footer {
     flex-direction: row;
     justify-content: space-between;
-    padding: 40px 30px;
+    padding: 40px 60px;
   }
 
   .footer .address .map {
@@ -717,9 +721,5 @@ body {
     flex-direction: column;
     align-items: flex-start;
   }
-
-
-
-
 
 }
