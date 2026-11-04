@@ -75,12 +75,6 @@ body {
   border-radius: 20px;
 }
 
-.header .nav-list .active {
-  background-color: green;
-  padding: 10px 20px;
-  border-radius: 20px;
-}
-
 .header .nav .nav-icon {
   display: flex;
   align-items: center;
@@ -637,6 +631,10 @@ body {
 @media (min-width: 1024px) {
   .header .nav {
     padding: 18px 30px;
+  }
+
+  .header .nav-list .nav-item {
+    margin-left: 50px;
   }
 
   .header .nav-icon .nav-item {
