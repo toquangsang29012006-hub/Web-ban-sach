@@ -14,11 +14,6 @@ body {
   font-family: 'Be VietNam Pro', 'serif';
 }
 
-.container {
-  width: 100%;
-  padding: 0 30px;
-}
-
 
 /* Trang chủ */
 .header {
@@ -220,7 +215,7 @@ body {
 }
 
 .main .book-infor {
-  padding: 12px 12px;
+  padding: 16px 14px;
 }
 
 .main .book-name {

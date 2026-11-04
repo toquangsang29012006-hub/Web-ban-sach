@@ -19,12 +19,6 @@ body {
   background-color: #f8fafc;
 }
 
-.container {
-  width: 100%;
-  margin: 0 auto;
-  padding: 0px 12px;
-}
-
 .header {
   position: relative;
 }
@@ -34,8 +28,6 @@ body {
   height: 50px;
   border-radius: 50%;
 }
-
-
 
 .header .nav {
   display: flex;
@@ -89,6 +81,7 @@ body {
 
 .header .nav-list .active {
   background-color: green;
+  padding: 10px 20px;
 }
 
 .header .nav .nav-icon {
@@ -109,6 +102,10 @@ body {
 .header .icon-start {
   color: #fff;
   font-size: 22px;
+}
+
+.main {
+  padding: 0 20px;
 }
 
 .main .show {
@@ -196,12 +193,6 @@ body {
 }
 
 @media (min-width: 768px) {
-
-  .container {
-    max-width: 720px;
-    margin: 0 auto;
-  }
-
   .header .img-logo {
     width: 70px;
     height: 70px;
@@ -263,21 +254,9 @@ body {
   .footer .sum-buy p {
     font-size: 20px;
   }
-
-
-
 }
 
-
-
-
 @media (min-width: 1024px) {
-
-  .container {
-    max-width: 960px;
-    margin: 0 auto;
-  }
-
   .header .nav {
     padding: 18px 30px;
   }
@@ -299,6 +278,16 @@ body {
     display: block;
     font-size: 17px;
     margin-left: 12px;
+  }
+
+  .main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main .item-product {
+    min-width: 960px;
   }
 
   .footer .sum-buy {
