@@ -14,7 +14,6 @@ body {
   font-family: 'Be VietNam Pro', 'serif';
 }
 
-
 /* Trang chủ */
 .header {
   position: relative;
@@ -108,53 +107,7 @@ body {
 
 .main .title {
   margin-bottom: 30px;
-  font-size: 45px;
-}
-
-.main .category {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 16px;
-  padding: 16px 20px;
-  border: 2px solid #ccc;
-  border-radius: 12px;
-  background-color: #fff;
-  margin-bottom: 16px;
-}
-
-.main .category-col {
-  border-top: 1px solid #ccc;
-  padding-top: 16px;
-}
-
-.main .category-col:first-child {
-  border-top: 0;
-  padding-top: 0;
-}
-
-.main .category-title {
-  font-size: 16px;
-  color: black;
-  margin-bottom: 8px;
-  font-weight: bold;
-}
-
-.main .list-category {
-  list-style: none;
-}
-
-.main .list-category li {
-  margin-bottom: 5px;
-}
-
-.main .category-link {
-  color: black;
-  font-size: 14px;
-}
-
-.main .category-link:hover {
-  color: goldenrod;
-  font-weight: bold;
+  font-size: 30px;
 }
 
 .main .option {
@@ -164,8 +117,9 @@ body {
 }
 
 .main .book-filter {
-  width: 180px;
+  width: 190px;
   padding: 12px 16px;
+  font-size: 14px;
   border-radius: 12px;
   border: 2px solid #ccc;
   font-weight: bold;
@@ -174,7 +128,7 @@ body {
 
 .main hr {
   color: #e5e7eb;
-  margin-top: 5px;
+  margin-top: 10px;
   margin-bottom: 60px;
 }
 
@@ -183,6 +137,7 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  scroll-margin-top: 190px;
 }
 
 .main .list-book img {
@@ -297,6 +252,42 @@ body {
   font-size: 13px;
 }
 
+/* Phân trang */
+.pagination {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.pagination__button {
+  min-width: 30px;
+  height: 30px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  transition: 0.3s ;
+}
+
+.pagination__button--active {
+  background-color: goldenrod;
+  border-color: goldenrod;
+  color: #fff;
+}
+ 
+.pagination__button:disabled {
+  opacity: 0.4;
+}
+
+.pagination__button:not(:disabled):not(.pagination__button--active):hover {
+  border-color: goldenrod;
+  color: goldenrod;
+}
+
 @media (min-width: 768px) {
   .header .img-logo {
     width: 70px;
@@ -330,27 +321,19 @@ body {
     color: black;
   }
 
-  .main .category {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-  }
-
-  .main .category-col {
-    border-top: 0;
-    padding-top: 0;
-    border-left: 1px solid #ccc;
-    padding-left: 24px;
-  }
-
-  .main .category-col:first-child {
-    border-left: 0;
-    padding-left: 0;
+  .main .title {
+    margin-bottom: 35px;
+    font-size: 40px;
   }
 
   .main .book-filter {
-    padding: 12px 16px;
-    border-radius: 12px;
-    margin-bottom: 7px;
+    width: 220px;
+    padding: 14px 20px;
+    font-size: 16px;
+  }
+
+  .main .list-book {
+    scroll-margin-top: 205px;
   }
 
   .main .item-book {
@@ -403,9 +386,17 @@ body {
     font-size: 18px;
   }
 
+  .pagination {
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }
+
+  .pagination__button {
+    min-width: 35px;
+    height: 35px;
+    font-size: 18px;
+  }
 }
-
-
 
 @media (min-width: 1024px) {
   .header .nav {
@@ -431,7 +422,7 @@ body {
 
   .header .nav-icon span {
     display: block;
-    font-size: 18px;
+    font-size: 17px;
     margin-left: 12px;
   }
 
@@ -440,13 +431,18 @@ body {
   }
 
   .main .title {
-    margin-bottom: 35px;
-    font-size: 35px;
+    margin-bottom: 40px;
+    font-size: 45px;
   }
 
   .main .book-filter {
-    padding: 14px 18px;
-    font-size: 16px;
+    width: 250px;
+    padding: 16px 22px;
+    font-size: 18px;
+  }
+
+  .main .list-book {
+    scroll-margin-top: 220px;
   }
 
   .main .item-book {
@@ -475,5 +471,21 @@ body {
   .footer .contacs .list-contacs {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .pagination {
+    margin-top: 40px;
+    margin-bottom: 50px;
+  }
+
+  .pagination__button {
+    min-width: 40px;
+    height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  .pagination__button:disabled {
+    cursor: not-allowed;
   }
 }

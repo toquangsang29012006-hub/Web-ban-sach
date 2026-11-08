@@ -40,7 +40,7 @@
           <a href="cart.html" class="nav-link"> <i class="fa-solid fa-cart-shopping"></i> <span>Giỏ hàng</span> </a>
         </li>
         <li class="nav-item">
-          <a href="login.html" class="nav-link"> <i class="fa-solid fa-circle-user"></i> <span> Đăng nhập</span> </a>
+          <a href="dangnhap.html" class="nav-link"> <i class="fa-solid fa-circle-user"></i> <span> Đăng nhập</span> </a>
         </li>
         </ul>
       </nav>
@@ -49,43 +49,11 @@
     <main class="main">
       <section class="container">
         <h1 class="title">Danh mục sản phẩm</h1>
-        <section class="category">
-          <div class="category-col">
-            <h2 class="category-title"><i class="fa-solid fa-book"></i> Danh mục sách</h2>
-            <ul class="list-category">
-              <li><a href="" class="category-link">Sách mới</a></li>
-              <li><a href="" class="category-link">Sách bán chạy</a></li>
-              <li><a href="" class="category-link">Sách giảm giá</a></li>
-              <li><a href="" class="category-link">Sách tiếng Việt</a></li>
-              <li><a href="" class="category-link">Sách tiếng Anh</a></li>
-            </ul>
-          </div>
-          <div class="category-col">
-            <h2 class="category-title"><i class="fa-solid fa-list"></i> Loại sản phẩm</h2>
-            <ul class="list-category">
-              <li><a href="" class="category-link">Văn học</a></li>
-              <li><a href="" class="category-link">SGK</a></li>
-              <li><a href="" class="category-link">Truyện tranh</a></li>
-              <li><a href="" class="category-link">Từ điển</a></li>
-            </ul>
-          </div>
-          <div class="category-col">
-            <h2 class="category-title"><i class="fa-solid fa-book-open"></i> Nhà cung cấp</h2>
-            <ul class="list-category">
-              <li><a href="" class="category-link">NXB Trẻ</a></li>
-              <li><a href="" class="category-link">NXB Văn Học</a></li>
-              <li><a href="" class="category-link">NXB Dân trí</a></li>
-              <li><a href="" class="category-link">NXB Đồng Nai</a></li>
-              <li><a href="" class="category-link">NXB Giáo Dục</a></li>
-            </ul>
-          </div>
-        </section>
-        
         <section class="option">
           <select name="book-filter" id="book-filter" class="book-filter">
-            <option value="">Mặc định</option>
-            <option value="">Giá tăng dần</option>
-            <option value="">Giá giảm dần</option>
+            <option value="default">Mặc định</option>
+            <option value="price-asc">Giá tăng dần</option>
+            <option value="price-desc">Giá giảm dần</option>
           </select>
         </section>
         <hr />
@@ -143,7 +111,7 @@
             <div class="book-infor">
               <p class="id" hidden>007</p>
               <h4 class="book-name">Sách 7</h4>
-              <p class="price">80,000đ</p>
+              <p class="price">290,000đ</p>
             </div>
           </article>
           <article class="item-book">
@@ -155,11 +123,43 @@
             </div>
           </article>
           <article class="item-book">
-           <img src="./images/book-new-1.webp" alt="book-new-1" />
+           <img src="./images/book-7.jpg" alt="book-new-1" />
             <div class="book-infor">
               <p class="id" hidden>009</p>
               <h4 class="book-name">Sách 9</h4>
-              <p class="price">100,000đ</p>
+              <p class="price">46,500đ</p>
+            </div>
+          </article>
+          <article class="item-book">
+           <img src="./images/book-8.jpg" alt="book-new-1" />
+            <div class="book-infor">
+              <p class="id" hidden>010</p>
+              <h4 class="book-name">Sách 10</h4>
+              <p class="price">36,000đ</p>
+            </div>
+          </article>
+          <article class="item-book">
+           <img src="./images/book-9.jpg" alt="book-new-1" />
+            <div class="book-infor">
+              <p class="id" hidden>011</p>
+              <h4 class="book-name">Sách 11</h4>
+              <p class="price">82,000đ</p>
+            </div>
+          </article>
+          <article class="item-book">
+           <img src="./images/book-10.jpg" alt="book-new-1" />
+            <div class="book-infor">
+              <p class="id" hidden>012</p>
+              <h4 class="book-name">Sách 12</h4>
+              <p class="price">168,000đ</p>
+            </div>
+          </article>
+          <article class="item-book">
+           <img src="./images/book-11.jpg" alt="book-new-1" />
+            <div class="book-infor">
+              <p class="id" hidden>013</p>
+              <h4 class="book-name">Sách 13</h4>
+              <p class="price">92,000đ</p>
             </div>
           </article>
         </section>
@@ -201,6 +201,8 @@
         </ul>
       </section>
     </footer>
+
     <script src="./js/script.js"></script>
+    <script src="./js/product-category.js"></script>
   </body>
 </html>
