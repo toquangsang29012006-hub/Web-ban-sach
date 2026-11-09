@@ -18,152 +18,152 @@
   <body>
     <header class="header">
       <nav class="nav">
-        <i class="fa-solid fa-bars icon-none icon-start" id="nav-open"></i>
+        <li class="nav-item">
+          <i class="fa-solid fa-bars icon-none icon-start" id="nav-open"></i>
+        </li>
         <img src="./images/Logo.jpg" alt="Logo" class="img-logo" />
         <ul class="nav-list" id="show-menu">
-        <i class="fa-solid fa-x icon-none icon-end" id="nav-close"></i>
-        <li class="nav-item">
-          <a href="index.html" class="nav-link">Trang chủ</a>
-        </li>
-        <li class="nav-item">
-          <a href="product-categories.html" class="nav-link">Danh mục sách</a>
-        </li>
-        <li class="nav-item">
-          <a href="index.html#about" class="nav-link">Giới thiệu</a>
-        </li>
-        <li class="nav-item">
-          <a href="index.html#contacs" class="nav-link">Liên hệ</a>
-        </li>
-      </ul>
-      <ul class="nav-icon">
-        <li class="nav-item">
-          <a href="cart.html" class="nav-link"> <i class="fa-solid fa-cart-shopping"></i> <span>Giỏ hàng</span> </a>
-        </li>
-        <li class="nav-item" id="no-login">
-          <a href="dangnhap.html" class="nav-link"> <i class="fa-solid fa-circle-user"></i> <span> Đăng nhập</span> </a>
-        </li>
-        <li hidden id="login"></li>
+          <i class="fa-solid fa-x icon-none icon-end" id="nav-close"></i>
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Trang chủ</a>
+          </li>
+          <li class="nav-item">
+            <a href="product-categories.html" class="nav-link">Danh mục sách</a>
+          </li>
+          <li class="nav-item">
+            <a href="index.html#about" class="nav-link">Giới thiệu</a>
+          </li>
+          <li class="nav-item">
+            <a href="index.html#contacs" class="nav-link">Liên hệ</a>
+          </li>
+        </ul>
+        <ul class="nav-icon">
+          <li class="nav-item">
+            <a href="cart.html" class="nav-link"> <i class="fa-solid fa-cart-shopping"></i> <span>Giỏ hàng</span> </a>
+          </li>
+          <li class="nav-item" id="no-login">
+            <a href="dangnhap.html" class="nav-link"> <i class="fa-solid fa-circle-user"></i> <span> Đăng nhập</span> </a>
+          </li>
+          <li hidden id="login"></li>
         </ul>
       </nav>
     </header>
 
     <main class="main">
-      <section class="container">
-        <h1 class="title">Danh mục sản phẩm</h1>
-        <section class="category">
-          <div class="category-col">
-            <h2 class="category-title"><i class="fa-solid fa-book"></i> Danh mục sách</h2>
-            <ul class="list-category">
-              <li><a href="" class="category-link">Sách mới</a></li>
-              <li><a href="" class="category-link">Sách bán chạy</a></li>
-              <li><a href="" class="category-link">Sách giảm giá</a></li>
-              <li><a href="" class="category-link">Sách tiếng Việt</a></li>
-              <li><a href="" class="category-link">Sách tiếng Anh</a></li>
-            </ul>
+      <h1 class="title">Danh mục sản phẩm</h1>
+      <section class="option">
+        <select name="book-filter" id="book-filter" class="book-filter">
+          <option value="default">Mặc định</option>
+          <option value="price-asc">Giá tăng dần</option>
+          <option value="price-desc">Giá giảm dần</option>
+        </select>
+      </section>
+      <hr />
+      <section class="list-book">
+        <article class="item-book">
+          <img src="./images/Oxford_Dictionary.png" alt="book-new-1" />
+          <div class="book-infor">
+            <p class="id" hidden>001</p>
+            <h4 class="book-name">Sách 1</h4>
+            <p class="price">350,000đ</p>
           </div>
-          <div class="category-col">
-            <h2 class="category-title"><i class="fa-solid fa-list"></i> Loại sản phẩm</h2>
-            <ul class="list-category">
-              <li><a href="" class="category-link">Văn học</a></li>
-              <li><a href="" class="category-link">SGK</a></li>
-              <li><a href="" class="category-link">Truyện tranh</a></li>
-              <li><a href="" class="category-link">Từ điển</a></li>
-            </ul>
+        </article>
+        <article class="item-book">
+          <img src="./images/book-3.jpg" alt="book-new-1" />
+          <div class="book-infor">
+            <p class="id" hidden>002</p>
+            <h4 class="book-name">Sách 2</h4>
+            <p class="price">436,000đ</p>
           </div>
-          <div class="category-col">
-            <h2 class="category-title"><i class="fa-solid fa-book-open"></i> Nhà cung cấp</h2>
-            <ul class="list-category">
-              <li><a href="" class="category-link">NXB Trẻ</a></li>
-              <li><a href="" class="category-link">NXB Văn Học</a></li>
-              <li><a href="" class="category-link">NXB Dân trí</a></li>
-              <li><a href="" class="category-link">NXB Đồng Nai</a></li>
-              <li><a href="" class="category-link">NXB Giáo Dục</a></li>
-            </ul>
+        </article>
+        <article class="item-book">
+          <img src="./images/book-4.jpg" alt="book-new-1" />
+          <div class="book-infor">
+            <p class="id" hidden>003</p>
+            <h4 class="book-name">Sách 3</h4>
+            <p class="price">43,000đ</p>   
+            </div>
+        </article>
+        <article class="item-book">
+          <img src="./images/book-3.webp" alt="book-new-1" />
+          <div class="book-infor">
+              <p class="id" hidden>004</p>
+              <h4 class="book-name">Sách 4</h4>
+              <p class="price">95,000đ</p>
+            </div>
+        </article>
+        <article class="item-book">
+          <img src="./images/book-2.jpg" alt="book-new-1" />
+          <div class="book-infor">
+            <p class="id" hidden>005</p>
+            <h4 class="book-name">Sách 5</h4>
+            <p class="price">76,000đ</p>
           </div>
-        </section>
-        
-        <section class="option">
-          <select name="book-filter" id="book-filter" class="book-filter">
-            <option value="">Mặc định</option>
-            <option value="">Giá tăng dần</option>
-            <option value="">Giá giảm dần</option>
-          </select>
-        </section>
-        <hr />
-        <section class="list-book">
-          <article class="item-book">
-           <img src="./images/Oxford_Dictionary.png" alt="book-new-1" />
-            <div class="book-infor">
-              <p class="id" hidden>001</p>
-              <h4 class="book-name">Sách 1</h4>
-              <p class="price">350,000đ</p>
-            </div>
-          </article>
-          <article class="item-book">
-            <img src="./images/book-3.jpg" alt="book-new-1" />
-            <div class="book-infor">
-              <p class="id" hidden>002</p>
-              <h4 class="book-name">Sách 2</h4>
-              <p class="price">436,000đ</p>
-            </div>
-          </article>
-          <article class="item-book">
-           <img src="./images/book-4.jpg" alt="book-new-1" />
-            <div class="book-infor">
-              <p class="id" hidden>003</p>
-              <h4 class="book-name">Sách 3</h4>
-              <p class="price">43,000đ</p>   
-              </div>
-          </article>
-          <article class="item-book">
-           <img src="./images/book-3.webp" alt="book-new-1" />
-            <div class="book-infor">
-                <p class="id" hidden>004</p>
-                <h4 class="book-name">Sách 4</h4>
-                <p class="price">95,000đ</p>
-              </div>
-          </article>
-          <article class="item-book">
-           <img src="./images/book-2.jpg" alt="book-new-1" />
-            <div class="book-infor">
-              <p class="id" hidden>005</p>
-              <h4 class="book-name">Sách 5</h4>
-              <p class="price">76,000đ</p>
-            </div>
-          </article>
-          <article class="item-book">
-           <img src="./images/book-1.jpg" alt="book-new-1" />
-            <div class="book-infor">
-              <p class="id" hidden>006</p>
-              <h4 class="book-name">Sách 6</h4>
-              <p class="price">550,000đ</p>
-            </div>
-          </article>
-          <article class="item-book">
-           <img src="./images/book-5.jpg" alt="book-new-1" />
-            <div class="book-infor">
-              <p class="id" hidden>007</p>
-              <h4 class="book-name">Sách 7</h4>
-              <p class="price">80,000đ</p>
-            </div>
-          </article>
-          <article class="item-book">
-            <p class="id" hidden>008</p>
-            <img src="./images/book-6.jpg" alt="book-new-1" />
-            <div class="book-infor">
-              <h4 class="book-name">Sách 8</h4>
-              <p class="price">85,000đ</p>
-            </div>
-          </article>
-          <article class="item-book">
-           <img src="./images/book-new-1.webp" alt="book-new-1" />
-            <div class="book-infor">
-              <p class="id" hidden>009</p>
-              <h4 class="book-name">Sách 9</h4>
-              <p class="price">100,000đ</p>
-            </div>
-          </article>
-        </section>
+        </article>
+        <article class="item-book">
+          <img src="./images/book-1.jpg" alt="book-new-1" />
+          <div class="book-infor">
+            <p class="id" hidden>006</p>
+            <h4 class="book-name">Sách 6</h4>
+            <p class="price">550,000đ</p>
+          </div>
+        </article>
+        <article class="item-book">
+          <img src="./images/book-5.jpg" alt="book-new-1" />
+          <div class="book-infor">
+            <p class="id" hidden>007</p>
+            <h4 class="book-name">Sách 7</h4>
+            <p class="price">290,000đ</p>
+          </div>
+        </article>
+        <article class="item-book">
+          <p class="id" hidden>008</p>
+          <img src="./images/book-6.jpg" alt="book-new-1" />
+          <div class="book-infor">
+            <h4 class="book-name">Sách 8</h4>
+            <p class="price">85,000đ</p>
+          </div>
+        </article>
+        <article class="item-book">
+          <img src="./images/book-7.jpg" alt="book-new-1" />
+          <div class="book-infor">
+            <p class="id" hidden>009</p>
+            <h4 class="book-name">Sách 9</h4>
+            <p class="price">46,500đ</p>
+          </div>
+        </article>
+        <article class="item-book">
+          <img src="./images/book-8.jpg" alt="book-new-1" />
+          <div class="book-infor">
+            <p class="id" hidden>010</p>
+            <h4 class="book-name">Sách 10</h4>
+            <p class="price">36,000đ</p>
+          </div>
+        </article>
+        <article class="item-book">
+          <img src="./images/book-9.jpg" alt="book-new-1" />
+          <div class="book-infor">
+            <p class="id" hidden>011</p>
+            <h4 class="book-name">Sách 11</h4>
+            <p class="price">82,000đ</p>
+          </div>
+        </article>
+        <article class="item-book">
+          <img src="./images/book-10.jpg" alt="book-new-1" />
+          <div class="book-infor">
+            <p class="id" hidden>012</p>
+            <h4 class="book-name">Sách 12</h4>
+            <p class="price">168,000đ</p>
+          </div>
+        </article>
+        <article class="item-book">
+          <img src="./images/book-11.jpg" alt="book-new-1" />
+          <div class="book-infor">
+            <p class="id" hidden>013</p>
+            <h4 class="book-name">Sách 13</h4>
+            <p class="price">92,000đ</p>
+          </div>
+        </article>
       </section>
     </main>
     
@@ -202,6 +202,8 @@
         </ul>
       </section>
     </footer>
+
     <script src="./js/script.js"></script>
+    <script src="./js/product-category.js"></script>
   </body>
 </html>
