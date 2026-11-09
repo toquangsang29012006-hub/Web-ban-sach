@@ -35,36 +35,20 @@
         </ul>
         <ul class="nav-icon">
           <li class="nav-item">
-            <a href="" class="nav-link"> <i class="fa-solid fa-cart-shopping"></i> <span>Giỏ hàng</span> </a>
+            <a href="cart.html" class="nav-link"> <i class="fa-solid fa-cart-shopping"></i> <span>Giỏ hàng</span> </a>
           </li>
-          <li class="nav-item">
-            <a href="" class="nav-link"> <i class="fa-solid fa-circle-user"></i> <span> Đăng nhập</span> </a>
+          <li class="nav-item" id="no-login">
+            <a href="dangnhap.html" class="nav-link"> <i class="fa-solid fa-circle-user"></i> <span> Đăng nhập</span> </a>
           </li>
+          <li hidden id="login"></li>
         </ul>
       </nav>
     </header>
     <main class="main">
       <h1 class="title">Thông tin tài khoản</h1>
-      <section class="account-card">
+      <section class="account-card" id="parent-account">
         <img src="images/avatar.png" alt="Ảnh đại diện" class="avatar" />
-        <section class="account-infor">
-          <div class="account">
-            <h4 class="key">Họ và tên:</h4>
-            <p class="value">Nguyễn Văn A</p>
-          </div>
-          <div class="account">
-            <h4 class="key">SĐT:</h4>
-            <p class="value">0123456789</p>
-          </div>
-          <div class="account">
-            <h4 class="key">Ngày sinh:</h4>
-            <p class="value">01/01/2026</p>
-          </div>
-        </section>
-        <div class="address-user">
-          <i class="fa-solid fa-location-dot"></i>
-          <p class="address">Khu II, Đ. 3 Tháng 2, Ninh Kiều, Cần Thơ, Việt Nam</p>
-        </div>
+        
       </section>
     </main>
     <footer class="footer" id="contacs">
@@ -102,5 +86,8 @@
         </ul>
       </section>
     </footer>
+
+
+    <script src="./js/script.js"></script>
   </body>
 </html>

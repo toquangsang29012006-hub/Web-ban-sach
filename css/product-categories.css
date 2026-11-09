@@ -102,6 +102,11 @@ body {
   font-size: 22px;
 }
 
+.header .nav-icon .nav-link-login {
+  font-size: 12px;
+  color: white;
+}
+
 .main {
   margin-top: 120px;
 }
@@ -433,6 +438,10 @@ body {
     display: block;
     font-size: 18px;
     margin-left: 12px;
+  }
+
+  .header .nav-icon .nav-link-login {
+    font-size: 17px;
   }
 
   .main {

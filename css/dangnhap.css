@@ -1,0 +1,127 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f4f7f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.main {
+    min-width: 400px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.main .title {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.main .form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.main .form-item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: rgb(229, 230, 234);
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+}
+
+.main .form-item label {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.main .form-item input {
+    width: 100%;
+    font-size: 15px;
+    padding: 10px 20px;
+    border: 1px solid black;
+    border-radius: 15px;
+    color: #333;
+}
+
+.main .form-item-submit {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.main .btn-submit {
+    width: 100%;
+    font-size: 16px;
+    padding: 16px 26px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    transition: 0.4s ease;
+}
+
+.main .btn-submit:hover {
+    background-color: white;
+    color: blue;
+    border: 3px solid blue;
+}
+
+.text-link {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.text-link a {
+    font-size: 17px;
+    font-weight: bold;
+    color: blue;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+    .main .form-item {
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .main {
+        min-width: 580px;
+    }
+
+    .main .title {
+        margin-bottom: 25px;
+    }
+
+    .main .form-item label {
+        font-size: 20px;
+    }
+
+    .main .form input {
+        padding: 15px 22px;
+    }
+
+    .text-link {
+        margin-top: 20px;
+        font-size: 20px;
+    }
+
+    .text-link a {
+        font-size: 22px;
+    }
+}
