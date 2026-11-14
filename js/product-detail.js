@@ -69,7 +69,6 @@ btnAddCart.addEventListener("click", function () {
 btnBuyNow.addEventListener("click", function () {
   if (addToCart()) {
     alert("Đặt mua thành công! Đang chuyển đến giỏ hàng...");
-    // Chuyển hướng sang trang giỏ hàng (đổi lại tên file nếu bạn đặt khác)
     window.location.href = "cart.html";
   }
 });
