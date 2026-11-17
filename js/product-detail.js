@@ -1,92 +1,94 @@
 // product-detail.js
-class ProductDetail {
-  constructor(element) {
-    this.element = element;
-    this.tenEl = element.querySelector('.book-name');
-    this.anhEl = element.querySelector('img');
-    this.giaEl = element.querySelector('.price span');
-    this.soLuongEl = element.querySelector('.quantity-book');
-    this.btnThemGio = element.querySelector('.btn-add-cart');
-    this.btnMuaNgay = element.querySelector('.btn-buy-now');
+
+// 1. Lấy dữ liệu sách từ localStorage và hiển thị lên HTML
+function hienThiChiTietSach() {
+  const sach = JSON.parse(localStorage.getItem('sachDangXem'));
+  if (!sach) return;
+
+  const bookName = document.querySelector('.book-name');
+  const bookImg = document.querySelector('.item-book img');
+  const bookPrice = document.querySelector('.price span');
+
+  document.title = sach.ten;
+  if (bookName) bookName.textContent = sach.ten;
+  if (bookImg) {
+    bookImg.src = sach.anh;
+    bookImg.alt = sach.ten;
   }
-
-  // Đổ thông tin sách lấy từ trang danh mục lên HTML
-  hienThi(sach) {
-    if (!sach) return;
-    document.title = sach.ten;
-    this.tenEl.textContent = sach.ten;
-    this.anhEl.src = sach.anh;
-    this.anhEl.alt = sach.ten;
-    this.giaEl.textContent = sach.giaHienThi;
-  }
-
-  // Lưu sản phẩm vào giỏ hàng (localStorage)
-  themVaoGio() {
-    const soLuong = parseInt(this.soLuongEl.value);
-    if (isNaN(soLuong) || soLuong < 1) {
-      alert('Vui lòng nhập số lượng hợp lệ!');
-      this.soLuongEl.value = 1;
-      return false;
-    }
-
-    const sanPham = {
-      name: this.tenEl.textContent.trim(),
-      image: this.anhEl.getAttribute('src'),
-      price: this.giaEl.textContent.trim(),
-      quantity: soLuong,
-    };
-
-    const cart = JSON.parse(localStorage.getItem('cart')) || [];
-    const sanPhamCu = cart.find((item) => item.name === sanPham.name);
-
-    if (sanPhamCu) {
-      sanPhamCu.quantity += sanPham.quantity;
-    } else {
-      cart.push(sanPham);
-    }
-
-    localStorage.setItem('cart', JSON.stringify(cart));
-    return true;
-  }
-
-  // Gắn các sự kiện bấm nút và nhập số lượng
-  ganSuKien() {
-    // Chặn form tự reload trang khi nhấn Enter
-    this.element.querySelector('.quanlity')?.addEventListener('submit', (e) => e.preventDefault());
-
-    // Tự sửa về 1 nếu nhập số âm hoặc xóa trống
-    this.soLuongEl.addEventListener('change', () => {
-      if (this.soLuongEl.value < 1 || this.soLuongEl.value === '') {
-        this.soLuongEl.value = 1;
-      }
-    });
-
-    // Nút Thêm vào giỏ hàng
-    this.btnThemGio.addEventListener('click', () => {
-      if (this.themVaoGio()) {
-        alert(`Đã thêm ${this.soLuongEl.value} quyển "${this.tenEl.textContent}" vào giỏ hàng!`);
-      }
-    });
-
-    // Nút Mua ngay
-    this.btnMuaNgay.addEventListener('click', () => {
-      if (this.themVaoGio()) {
-        alert('Đặt mua thành công! Đang chuyển đến giỏ hàng...');
-        window.location.href = 'cart.html';
-      }
-    });
-  }
+  if (bookPrice) bookPrice.textContent = sach.gia;
 }
 
-function refeshDetail() {
+// 2. Xử lý lưu sản phẩm vào giỏ hàng (giữ nguyên cấu trúc cart cũ của bạn)
+function themVaoGioHang() {
+  const bookName = document.querySelector('.book-name');
+  const bookImg = document.querySelector('.item-book img');
+  const bookPrice = document.querySelector('.price span');
+  const quantityInput = document.querySelector('.quantity-book');
+
+  const quantity = parseInt(quantityInput.value);
+  if (isNaN(quantity) || quantity < 1) {
+    alert('Vui lòng nhập số lượng hợp lệ!');
+    quantityInput.value = 1;
+    return false;
+  }
+
+  const product = {
+    name: bookName.textContent.trim(),
+    image: bookImg.getAttribute('src'),
+    price: bookPrice.textContent.trim(),
+    quantity: quantity,
+  };
+
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  const sanPhamTonTai = cart.find((item) => item.name === product.name);
+
+  if (sanPhamTonTai) {
+    sanPhamTonTai.quantity += product.quantity;
+  } else {
+    cart.push(product);
+  }
+
+  localStorage.setItem('cart', JSON.stringify(cart));
+  return true;
+}
+
+// 3. Gắn sự kiện cho các nút và ô nhập số lượng
+function khoiTaoTrangChiTiet() {
   const khungSach = document.querySelector('.main .item-book');
   if (!khungSach) return;
 
-  const sach = JSON.parse(localStorage.getItem('sachDangXem'));
-  const chiTiet = new ProductDetail(khungSach);
+  hienThiChiTietSach();
 
-  chiTiet.hienThi(sach);
-  chiTiet.ganSuKien();
+  const formSoLuong = khungSach.querySelector('.quanlity');
+  const quantityInput = khungSach.querySelector('.quantity-book');
+  const btnAddCart = khungSach.querySelector('.btn-add-cart');
+  const btnBuyNow = khungSach.querySelector('.btn-buy-now');
+  const bookName = khungSach.querySelector('.book-name');
+
+  // Chặn form tự reload trang khi nhấn Enter
+  formSoLuong.addEventListener('submit', (e) => e.preventDefault());
+
+  // Tự sửa về 1 nếu nhập số âm hoặc xóa trống
+  quantityInput.addEventListener('change', () => {
+    if (quantityInput.value < 1 || quantityInput.value === '') {
+      quantityInput.value = 1;
+    }
+  });
+
+  // Nút Thêm vào giỏ hàng
+  btnAddCart.addEventListener('click', () => {
+    if (themVaoGioHang()) {
+      alert(`Đã thêm ${quantityInput.value} quyển "${bookName.textContent}" vào giỏ hàng!`);
+    }
+  });
+
+  // Nút Mua ngay
+  btnBuyNow.addEventListener('click', () => {
+    if (themVaoGioHang()) {
+      alert('Đặt mua thành công! Đang chuyển đến giỏ hàng...');
+      window.location.href = 'cart.html';
+    }
+  });
 }
 
-refeshDetail();
+khoiTaoTrangChiTiet();
