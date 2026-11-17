@@ -237,6 +237,7 @@ body {
 .main .gioi-thieu .desc {
   color: goldenrod;
   font-size: 12px;
+  margin-bottom: 20px;
 }
 
 .main .gioi-thieu .icon-start-link {

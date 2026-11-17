@@ -108,6 +108,7 @@ body {
 
 .main {
   margin-top: 120px;
+  padding: 0 20px;
 }
 
 .main .title {
@@ -115,7 +116,7 @@ body {
   font-size: 30px;
 }
 
-.main .option {
+.main .list-option {
   display: flex;
   justify-content: flex-end;
   align-items: left;
@@ -195,6 +196,24 @@ body {
   font-weight: bold;
 }
 
+.main .pagination {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  gap: 20px;
+}
+
+.main .pagination .btn-page {
+  padding: 10px 12px;
+  background-color: transparent;
+  border: 3px solid orange;
+  border-radius: 8px;
+}
+
+.main .pagination .btn-page:hover {
+  background-color: orange;
+}
+
 .footer {
   width: 100%;
   display: flex;
@@ -257,41 +276,7 @@ body {
   font-size: 13px;
 }
 
-/* Phân trang */
-.pagination {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 20px;
-  margin-bottom: 30px;
-}
 
-.pagination__button {
-  min-width: 30px;
-  height: 30px;
-  border: 2px solid #ccc;
-  border-radius: 10px;
-  background-color: #fff;
-  font-size: 16px;
-  font-weight: bold;
-  transition: 0.3s ;
-}
-
-.pagination__button--active {
-  background-color: goldenrod;
-  border-color: goldenrod;
-  color: #fff;
-}
- 
-.pagination__button:disabled {
-  opacity: 0.4;
-}
-
-.pagination__button:not(:disabled):not(.pagination__button--active):hover {
-  border-color: goldenrod;
-  color: goldenrod;
-}
 
 @media (min-width: 768px) {
   .header .img-logo {
@@ -390,17 +375,6 @@ body {
   .footer .contacs .item-contacs p {
     font-size: 18px;
   }
-
-  .pagination {
-    margin-top: 30px;
-    margin-bottom: 40px;
-  }
-
-  .pagination__button {
-    min-width: 35px;
-    height: 35px;
-    font-size: 18px;
-  }
 }
 
 @media (min-width: 1024px) {
@@ -480,21 +454,5 @@ body {
   .footer .contacs .list-contacs {
     flex-direction: column;
     align-items: flex-start;
-  }
-
-  .pagination {
-    margin-top: 40px;
-    margin-bottom: 50px;
-  }
-
-  .pagination__button {
-    min-width: 40px;
-    height: 40px;
-    font-size: 20px;
-    cursor: pointer;
-  }
-
-  .pagination__button:disabled {
-    cursor: not-allowed;
   }
 }

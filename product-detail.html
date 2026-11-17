@@ -19,7 +19,9 @@
         <i class="fa-solid fa-bars icon-none icon-start" id="nav-open"></i>
         <img src="./images/Logo.jpg" alt="Logo" class="img-logo" />
         <ul class="nav-list" id="show-menu">
-          <i class="fa-solid fa-x icon-none icon-end" id="nav-close"></i>
+          <li class="nav-item">
+            <i class="fa-solid fa-x icon-none icon-end" id="nav-close"></i>
+          </li>
           <li class="nav-item">
             <a href="index.html" class="nav-link">Trang chủ</a>
           </li>
@@ -35,7 +37,7 @@
         </ul>
         <ul class="nav-icon">
           <li class="nav-item">
-            <a href="" class="nav-link"> <i class="fa-solid fa-cart-shopping"></i> <span>Giỏ hàng</span> </a>
+            <a href="/cart.html" class="nav-link"> <i class="fa-solid fa-cart-shopping"></i> <span>Giỏ hàng</span> </a>
           </li>
           <li class="nav-item" id="no-login">
             <a href="dangnhap.html" class="nav-link"> <i class="fa-solid fa-circle-user"></i> <span> Đăng nhập</span> </a>
@@ -47,14 +49,14 @@
 
     <main class="main">
       <article class="item-book">
-        <h1 class="book-name">Sách Tiếng Anh</h1>
+        <h1 class="book-name"></h1>
         <hr />
-        <img src="./images/book-discount-1.jpg" alt="book" />
+        <img src="" alt="book" />
         <hr />
-        <p class="price">Giá tiền: <span>185.000đ</span></p>
+        <p class="price">Giá tiền: <span></span></p>
         <form class="quanlity">
           <label for="quanlity">Số lượng: </label>
-          <input type="number" class="quantity-book" value="1" min="1" />
+          <input type="number" class="quantity-book" min="1" />
         </form>
         <div class="buttons">
           <button class="btn-add-cart">Thêm vào giỏ hàng</button>
@@ -100,5 +102,6 @@
     </footer>
 
     <script src="./js/script.js"></script>
+    <script src="./js/detail.js"></script>
   </body>
 </html>

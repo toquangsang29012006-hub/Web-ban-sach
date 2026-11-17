@@ -113,10 +113,6 @@ body {
   text-align: center;
 }
 
-.main .d-none {
-  display: none;
-}
-
 .main .item-product {
   display: flex;
   justify-content: space-between;
@@ -130,6 +126,8 @@ body {
 
 .main .item-product .img-product {
   width: 90px;
+  aspect-ratio: 3/4;
+  object-fit: cover;
 }
 
 .main .item-product .book-name {
@@ -288,11 +286,11 @@ body {
     font-size: 17px;
   }
 
-  .main {
+  /* .main {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+  } */
 
   .main .item-product {
     min-width: 960px;

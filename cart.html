@@ -14,7 +14,9 @@
             <i class="fa-solid fa-bars icon-none icon-start" id="nav-open"></i>
             <img src="./images/Logo.jpg" alt="Logo" class="img-logo">
             <ul class="nav-list" id="show-menu">
-                <i class="fa-solid fa-x icon-none icon-end" id="nav-close"></i>
+                <li class="nav-item">
+                    <i class="fa-solid fa-x icon-none icon-end" id="nav-close"></i>
+                </li>
                 <li class="nav-item">
                     <a href="index.html#home" class="nav-link">Trang chủ</a>
                 </li>
@@ -42,21 +44,7 @@
         </nav>  
     </header>
     <main class="main">
-        <!-- <div class="main-content"> -->
-            <p class="show d-none">Không có sản phẩm nào được chọn</p>
-            <article class="item-product">
-                <form action="">
-                    <input type="checkbox">
-                </form>
-                <img src="./images/book-new-1.webp" alt="" class="img-product">
-                <div class="product-info">
-                    <h4 class="book-name"> Sách 1</h4>
-                    <p class="book-price">120.000đ</p>
-                </div>
-                <p class="so-luong">1</p>
-                <button class="btn-delete">Xóa</button>
-            </article>
-        <!-- </div> -->
+        
     </main>
 
         
@@ -66,11 +54,12 @@
             <input type="checkbox" id="all">
         </form>
         <div class="sum-buy">
-            <p>Tổng: <span class="sum-price">120.000đ</span></p>
+            <p>Tổng: <span class="sum-price"></span></p>
             <button class="btn-buy">Mua hàng</button>
         </div>
     </footer>
 
     <script src="./js/script.js"></script>
+    <script src="./js/cart.js"></script>
 </body>
 </html>
