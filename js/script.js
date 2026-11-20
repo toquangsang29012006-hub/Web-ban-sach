@@ -15,7 +15,6 @@ function openCloseMenu () {
 
 function renderAccount() {
   const userLogin = JSON.parse(localStorage.getItem('currentUser'));
-
   const noLoginUser = document.getElementById("no-login");
   const loginUser = document.getElementById("login");
   const myAccount = document.getElementById("parent-account");

@@ -1,14 +1,34 @@
 function setImg(product) {
-    return '<img src="' + product.image + '" alt="" class="img-product"></img>'
-    
-}
-function setNameAndPrice(product) {
-    return '<div class="product-info"><h4 class="book-name">' + product.name + '</h4><p class="book-price">' + product.price + '</p></div>'
+    const img = document.createElement('img');
+    img.src = product.image;
+    img.alt = "";
+    img.className = "img-product";
+    return img;
 }
 
+function setNameAndPrice(product) {
+    const divInfo = document.createElement('div');
+    divInfo.className = "product-info";
+
+    const h4 = document.createElement('h4');
+    h4.className = "book-name";
+    h4.textContent = product.name;
+
+    const pPrice = document.createElement('p');
+    pPrice.className = "book-price";
+    pPrice.textContent = product.price;
+
+    divInfo.appendChild(h4);
+    divInfo.appendChild(pPrice);
+
+    return divInfo;
+}
 
 function setQuantity(product) {
-    return '<p class="quantity">' + product.quantity +'</p>'
+    const pQuantity = document.createElement('p');
+    pQuantity.className = "quantity";
+    pQuantity.textContent = product.quantity;
+    return pQuantity;
 }
 
 function showCart() {
@@ -20,12 +40,33 @@ function showCart() {
         return;
     }
 
-    const html = cart.map(productBook => {
-        return '<article class="item-product"><form action=""><input type="checkbox"></form>' + setImg(productBook) + setNameAndPrice(productBook) + setQuantity(productBook) + '<button class="btn-delete">Xóa</button></article>'
-    });
 
-    product.innerHTML = html;
+    cart.forEach(productBook => {
+        const article = document.createElement('article');
+        article.className = 'item-product';
+
+        const form = document.createElement('form');
+        const checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
+        form.appendChild(checkbox);
+        article.appendChild(form);
+
+        // Dùng insertAdjacentHTML vì các hàm set của bạn trả về chuỗi HTML
+        article.appendChild(setImg(productBook));
+        article.appendChild(setNameAndPrice(productBook));
+        article.appendChild(setQuantity(productBook));
+
+        const btnDelete = document.createElement('button');
+        btnDelete.className = 'btn-delete';
+        btnDelete.textContent = 'Xóa';
+        article.appendChild(btnDelete);
+
+        // Nối tiếp vào cuối danh sách hiện tại
+        product.appendChild(article);
+    });
 }
+
+
 
 function sumPrice() {
     const cart = JSON.parse(localStorage.getItem("cart")) || [];

@@ -1,3 +1,5 @@
+let userList = [];
+
 function DangKy() {
     const formDangKy = document.getElementById("form");
 
@@ -11,8 +13,6 @@ function DangKy() {
             userDate: document.getElementById("date").value,
             userAddress: document.getElementById("address").value
         }
-
-        let userList = [];
 
         if(localStorage.getItem('users') !== null) {
             userList = JSON.parse(localStorage.getItem('users'));

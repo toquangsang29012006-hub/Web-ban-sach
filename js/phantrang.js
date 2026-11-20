@@ -71,7 +71,6 @@ function renderSort() {
       }
     }
   })
-  
 }
 
 function setup() {

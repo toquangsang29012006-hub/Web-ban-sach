@@ -640,7 +640,7 @@ body {
   }
 
   .header .nav-list .nav-item {
-    margin-left: 50px;
+    margin-left: 30px;
   }
 
   .header .nav-icon .nav-item {
@@ -648,7 +648,7 @@ body {
   }
 
   .header .nav-list .nav-link {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .header .nav-icon .nav-link {
@@ -658,7 +658,7 @@ body {
 
   .header .nav-icon span {
     display: block;
-    font-size: 17px;
+    font-size: 16px;
     margin-left: 12px;
   }
 
